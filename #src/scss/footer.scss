@@ -1,0 +1,140 @@
+.footer {
+	background: $blue;
+	// .footer__container
+	&__container {
+	}
+	// .footer__flex
+	&__flex {
+		display: flex;
+	}
+	// .footer__left
+	&__left {
+		padding-top: 151px;
+		padding-bottom: 180px;
+		flex: 0 0 51.1%;
+	}
+	// .footer__form
+	&__form {
+	}
+	// .footer__right
+	&__right {
+		padding-top: 151px;
+		padding-bottom: 180px;
+		flex: 1 0 auto;
+		background: #20283c;
+		margin-right: calc((100vw - 100%) / -2);
+	}
+}
+
+.form {
+	max-width: 485px;
+
+	// .form__title
+	&__title {
+		margin-bottom: 32px;
+		color: #fff;
+	}
+	// .form__text
+	&__text {
+		margin-bottom: 70px;
+		font-size: 18px;
+		line-height: 1.67;
+		color: #ffffff;
+		p {
+		}
+	}
+
+	input {
+		padding: 15px 29px;
+		font-size: 18px;
+		color: #fff;
+		height: 60px;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		background: transparent;
+		width: 100%;
+		&:focus {
+			color: #ffffff;
+			border: 1px solid #9e8c73;
+			&::placeholder {
+				color: #fff;
+			}
+		}
+		&::placeholder {
+			color: rgba(255, 255, 255, 0.4);
+		}
+	}
+
+	.wpcf7-form {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 32px;
+	}
+	.wpcf7-form-control-wrap {
+		margin-bottom: 30px;
+	}
+	&__btn {
+		background: #9e8c73;
+		font-size: 18px;
+		line-height: 1.67;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #ffffff;
+	}
+	// .from__privacy
+	&__privacy {
+		font-size: 14px;
+		line-height: 1.71;
+		color: rgba(255, 255, 255, 0.4);
+	}
+}
+
+.right-footer {
+	// .right-footer__logo
+	&__logo {
+		margin-bottom: 147px;
+	}
+	// .right-footer__contacts
+	&__contacts {
+		margin-bottom: 35px;
+	}
+	// .right-footer__contacts-row
+	&__contacts-row {
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: 26px;
+		}
+	}
+	// .right-footer__tel
+	&__tel {
+		margin-right: 34px;
+		white-space: nowrap;
+		font-size: 18px;
+		line-height: 1.67;
+		color: #ffffff;
+	}
+	// .right-footer__department
+	&__department {
+		font-size: 14px;
+		line-height: lg(19, 14);
+		color: rgba(255, 255, 255, 0.5);
+	}
+	// .right-footer__btn
+	&__btn {
+		margin-bottom: 112px;
+	}
+	// .right-footer__info
+	&__info {
+		font-size: 12px;
+		line-height: lh(16, 12);
+		color: rgba(255, 255, 255, 0.5);
+		p {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+		a {
+			color: #fff;
+		}
+	}
+}

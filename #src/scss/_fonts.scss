@@ -1,0 +1,20 @@
+// @font-face {
+// 	font-family: "Forum";
+// 	src: url("../fonts/Forum-regular.woff2") format("woff2"), url("../fonts/Forum-regular.woff") format("woff");
+// 	font-display: swap;
+// 	font-weight: 400;
+// 	font-style: normal;
+// }
+@mixin font($name, $url, $weight, $style) {
+	@font-face {
+		font-family: "#{$name}";
+		src: url("../#{$url}.woff2") format("woff2"), url("../#{$url}.woff") format("woff");
+		font-display: swap;
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+
+@include font(Nunito Sans, fonts/Nunitosansregular, 400, normal);
+@include font(Nunito Sans, fonts/Nunitosansbold, 700, normal);
+@include font(Lighthaus, fonts/Lighthaus, 400, normal);
