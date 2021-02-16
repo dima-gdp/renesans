@@ -1,15 +1,16 @@
 $(document).ready(function () {
-	// objectFitImages();
+	objectFitImages();
+	AOS.init();
 
-	 // Табы
-		// function tabs(buttonsList, wrapper, tabBlock) {
-		// 	$(buttonsList).on('click', 'li:not(.active)', function () {
-		// 		$(this).addClass('active').siblings().removeClass('active')
-		// 			.closest(wrapper).find(tabBlock).removeClass('active').eq($(this).index()).addClass('active');
-		// 	})
-		// }
+	// Табы
+	// function tabs(buttonsList, wrapper, tabBlock) {
+	// 	$(buttonsList).on('click', 'li:not(.active)', function () {
+	// 		$(this).addClass('active').siblings().removeClass('active')
+	// 			.closest(wrapper).find(tabBlock).removeClass('active').eq($(this).index()).addClass('active');
+	// 	})
+	// }
 
-			// function toggleTabs(top, bottom, topActive) {
+	// function toggleTabs(top, bottom, topActive) {
 	// 	$(top).on('click', function (ev) {
 	// 		let text = $(this).next(bottom);
 
@@ -23,39 +24,50 @@ $(document).ready(function () {
 	// 		}
 	// 	})
 	// }
-	
+
 
 	// Swiper
-	// const slider_pag = new Swiper('.pag-hero__slider', {
-	// 	slidesPerView: 'auto',
-	// 	spaceBetween: 45,
-	// 	loop: false,
-	// 	loopedSlides: 1,
-	// 	slideToClickedSlide: true,
-	// 	breakpoints: {
-	// 		320: {
-	// 			spaceBetween: 15,
-	// 		},
-	// 		374: {
-	// 			spaceBetween: 25,
-	// 		},
-	// 		577: {
-	// 			spaceBetween: 35,
-	// 		},
-	// 		625: {
-	// 			spaceBetween: 40,
-	// 		},
-	// 		769: {
-	// 			spaceBetween: 15,
-	// 		},
-	// 		993: {
-	// 			spaceBetween: 30,
-	// 		},
-	// 		1440: {
-	// 			spaceBetween: 45,
-	// 		},
-	// 	}
-	// });
+	const slider_hero = new Swiper('.hero__slider', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: false,
+		// loopedSlides: 1,
+		// slideToClickedSlide: true,
+		breakpoints: {
+			993: {
+				pagination: {
+					el: '.hero-pagination',
+					clickable: true,
+					renderBullet: function (index, className) {
+						return '<div class="' + className + '">' + '<span>' + (index + 1) + '</span></div>';
+					}
+				},
+			},
+		}
+	});
+
+
+	const slider_partners = new Swiper('.partners__slider', {
+		slidesPerView: 5,
+		spaceBetween: 40,
+		loop: false,
+		navigation: {
+			nextEl: '.nav-slider--prev',
+			prevEl: '.nav-slider--next',
+		},
+		breakpoints: {
+			// 993: {
+			// 	pagination: {
+			// 		el: '.hero-pagination',
+			// 		clickable: true,
+			// 		renderBullet: function (index, className) {
+			// 			return '<div class="' + className + '">' + '<span>' + (index + 1) + '</span></div>';
+			// 		}
+			// 	},
+			// },
+		}
+	});
+
 
 
 	// Fancy-box

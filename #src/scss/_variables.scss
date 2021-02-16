@@ -8,8 +8,8 @@ $gold: #9e8c73;
 	@return $value / $base * 100vw;
 }
 
-@function rem($value, $base) {
-	@return $value / $base + rem;
+@function em($value, $base) {
+	@return $value / $base + em;
 }
 
 @function lh($value, $base) {

@@ -137,6 +137,10 @@ input[type="submit"] {
 	text-transform: uppercase;
 }
 
+.gold {
+	color: $gold;
+}
+
 // Анимации
 
 @keyframes gallery {
@@ -145,5 +149,16 @@ input[type="submit"] {
 	}
 	100% {
 		transform: translateX(-100%);
+	}
+}
+
+[data-aos="branch"] {
+	transition-property: transform;
+	transform: rotate(50deg);
+
+	@media screen and (min-width: 768px) {
+		&.aos-animate {
+			transform: rotate(0);
+		}
 	}
 }

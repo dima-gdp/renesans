@@ -20,6 +20,8 @@
 	&__right {
 		padding-top: 151px;
 		padding-bottom: 180px;
+		padding-left: 145px;
+		padding-right: 60px;
 		flex: 1 0 auto;
 		background: #20283c;
 		margin-right: calc((100vw - 100%) / -2);
@@ -92,6 +94,7 @@
 	// .right-footer__logo
 	&__logo {
 		margin-bottom: 147px;
+		display: inline-block;
 	}
 	// .right-footer__contacts
 	&__contacts {

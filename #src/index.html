@@ -1,16 +1,29 @@
 @@include('header.html')
 
 <div class="main">
-	<!-- <section class="hero">
+	<section class="hero">
 		<div class="hero__slider">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide hero-slide">
 					<div class="hero-slide__img">
 						<img src="img/hero-slider-1.jpg" alt="">
 					</div>
-					<div class="hero-slide__text">
-						<h3 class="hero-slide__title"></h3>
-						<p class="hero-slide__subtitle"></p>
+					<div class="hero-slide__container">
+						<div class="hero-slide__text container">
+							<h3 class="hero-slide__title">ЖК «Онегин»</h3>
+							<p class="hero-slide__subtitle">Великолепный выбор</p>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide hero-slide">
+					<div class="hero-slide__img">
+						<img src="img/hero-slider-1.jpg" alt="">
+					</div>
+					<div class="hero-slide__container">
+						<div class="hero-slide__text container">
+							<h3 class="hero-slide__title">ЖК «Онегин»</h3>
+							<p class="hero-slide__subtitle">Великолепный выбор</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -19,17 +32,186 @@
 	</section>
 
 	<section class="projects">
-		<h2 class="projects__title"></h2>
-		<div class="projects__grid">
-			<div class="projects__column">
-				<div class="item">
-					<a href="#" class="item__project">
-
+		<div class="projects__container container">
+			<h2 class="projects__title title">Проекты</h2>
+			<div class="projects__grid">
+				<div class="projects__column">
+					<a href="#" class="item-project">
+						<div class="rounds">
+							<span class="rounds__item">Старт продаж в мае</span>
+							<span class="rounds__item rounds__item--gold">Дом сдан</span>
+						</div>
+						<div class="item-project__img">
+							<img src="img/project-1.jpg" alt="">
+						</div>
+						<p class="item-project__descr">Жилой комплекс</p>
+						<h3 class="item-project__title">«Ренессанс»</h3>
+						<span class="item-project__link">Подробнее</span>
 					</a>
+				</div>
+				<div class="projects__column">
+					<a href="#" class="item-project">
+						<div class="rounds">
+							<span class="rounds__item">Старт продаж в мае</span>
+							<span class="rounds__item rounds__item--gold">Дом сдан</span>
+						</div>
+						<div class="item-project__img">
+							<img src="img/project-1.jpg" alt="">
+						</div>
+						<p class="item-project__descr">Жилой комплекс</p>
+						<h3 class="item-project__title">«Ренессанс»</h3>
+						<span class="item-project__link">Подробнее</span>
+					</a>
+				</div>
+				<div class="projects__column">
+					<a href="#" class="item-project item-project--coming">
+						<div class="item-project__img">
+							<img src="img/project-1.jpg" alt="">
+						</div>
+						<span class="item-project__link">Подробнее</span>
+						<div class="hide-item-project">
+							<p class="hide-item-project__title">Скоро ...</p>
+							<p class="hide-item-project__subtitle">Следите за новостями, чтобы быть в курсе новых проектов компании
+							</p>
+						</div>
+					</a>
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<section class="new">
+		<div class="new__container container">
+			<h2 class="new__title title">Что нового</h2>
+			<div class="new__grid">
+				<div class="new__column">
+					<div class="new__item item-new">
+						<div class="item-new__img">
+							<img src="img/new-1.jpg" alt="">
+						</div>
+						<span class="item-new__date">07.01.21</span>
+						<h3 class="item-new__title">Вторая очередь ЖК «Онегин» готова к заселению</h3>
+						<p class="item-new__subtitle">Пять корпусов рассчитаны на 687 квартир, из которых 348 уже реализованы.</p>
+					</div>
+				</div>
+				<div class="new__column">
+					<div class="new__item item-new">
+						<div class="item-new__img">
+							<img src="img/new-2.jpg" alt="">
+						</div>
+						<span class="item-new__date">07.01.21</span>
+						<h3 class="item-new__title">Вторая очередь ЖК «Онегин» готова к заселению</h3>
+
+					</div>
+				</div>
+				<div class="new__column">
+					<div class="new__item item-new">
+						<div class="item-new__img">
+							<img src="img/new-3.jpg" alt="">
+						</div>
+						<span class="item-new__date">07.01.21</span>
+						<h3 class="item-new__title">Вторая очередь ЖК «Онегин» готова к заселению</h3>
+
+					</div>
+				</div>
+				<div class="new__column">
+					<div class="new__item item-new">
+						<div class="item-new__img">
+							<img src="img/new-4.jpg" alt="">
+						</div>
+						<span class="item-new__date">07.01.21</span>
+						<h3 class="item-new__title">Вторая очередь ЖК «Онегин» готова к заселению</h3>
+
+					</div>
+				</div>
+				<div class="new__column">
+					<div class="new__item item-new">
+						<div class="item-new__img">
+							<img src="img/new-5.jpg" alt="">
+						</div>
+						<span class="item-new__date">07.01.21</span>
+						<h3 class="item-new__title">Вторая очередь ЖК «Онегин» готова к заселению</h3>
+
+					</div>
+				</div>
+			</div>
+			<a href="#" class="new__link">
+				@@include('img/new-decor.svg')
+				<span>Смотреть все новости</span>
+			</a>
+		</div>
+	</section>
+
+	<section class="art">
+		<div class="art__container container">
+			<div class="art__flex">
+				<div class="art__left">
+					<span class="art__branch" style="background-image: url(img/branch.svg);" data-aos="branch"
+						data-aos-duration="1000" data-aos-easing="ease-in-out"></span>
+					<h2 class="art__title title">Ренессанс. Искусство строить.</h2>
+					<div class="art__subtitle">
+						<p>Разнообразный и богатый опыт консультация с широким активом обеспечивает широкому кругу (специалистов)
+							участие в формировании дальнейших направлений развития. Разнообразный и богатый опыт начало повседневной
+							работы по формированию позиции в значительной степени обуславливает создание систем массового участия.
+							Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности требуют от
+							нас анализа модели развития. Равным образом реализация намеченных плановых заданий позволяет выполнять
+							важные задания по разработке новых предложений. Повседневная практика показывает, что консультация с
+							широким активом представляет собой интересный эксперимент проверки дальнейших направлений развития.</p>
+					</div>
+					<a href="#" class="art__link">Подробнее</a>
+				</div>
+				<div class="art__right">
+					<div class="art__men" style="background-image: url(img/men.png);"></div>
+					<div class="art__image">
+						<img src="img/art.jpg" alt="">
+					</div>
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
+
+	<section class="partners">
+		<div class="partners__container container">
+			<h2 class="partners__title title">В партнерстве с лидерами</h2>
+			<div class="partners__slider-wrapper">
+				<div class="partners__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="partners__logo">
+								<img src="img/partner-1.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="partners__logo">
+								<img src="img/partner-2.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="partners__logo">
+								<img src="img/partner-3.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="partners__logo">
+								<img src="img/partner-4.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="partners__logo">
+								<img src="img/partner-5.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="nav-slider__btn nav-slider--prev">@@include('img/arrow-slider.svg')</button>
+				<button class="nav-slider__btn nav-slider--next">@@include('img/arrow-slider.svg')</button>
+			</div>
+
+		</div>
+	</section>
+
 </div>
 
 @@include('footer.html')
