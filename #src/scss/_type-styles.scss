@@ -1,6 +1,6 @@
 .type-style {
 	h1 {
-		margin-bottom: 35px;
+		margin-bottom: 40px;
 		@media (max-width: 992px) {
 			@include adaptiv(margin-bottom, 35, 20, 992, 320);
 		}
@@ -13,7 +13,7 @@
 	h6,
 	ul,
 	ol,
-	table {
+	.table {
 		margin-bottom: 25px;
 		@media (max-width: 992px) {
 			@include adaptiv(margin-bottom, 25, 15, 992, 320);
@@ -21,27 +21,27 @@
 	}
 	p {
 		font-size: 18px;
-		line-height: lh(26, 18);
+		line-height: 1.67;
 		@media (max-width: 992px) {
 			@include adaptiv(font-size, 18, 15, 992, 320);
 		}
 	}
 
 	h1 {
-		font-weight: 900;
-		font-size: 36px;
-		line-height: 1.28;
-		letter-spacing: 0.05em;
+		font-family: "Lighthaus";
+		font-size: 48px;
+		line-height: 1.21;
 		text-transform: uppercase;
+		color: #000000;
 		@media (max-width: 1200px) {
 			@include adaptiv(font-size, 36, 25, 1200, 320);
 		}
 	}
 	h2 {
-		font-weight: 900;
-		font-size: 30px;
-		line-height: 1.33;
-		letter-spacing: 0.05em;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 1.25;
+		color: #000000;
 		text-transform: uppercase;
 		@media (max-width: 1200px) {
 			@include adaptiv(font-size, 30, 16, 1200, 320);
@@ -49,10 +49,10 @@
 	}
 
 	h3 {
-		font-weight: 900;
-		font-size: 24px;
-		line-height: lh(34, 24);
-		letter-spacing: 0.05em;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 1.28;
+		color: #000000;
 		text-transform: uppercase;
 		@media (max-width: 1200px) {
 			@include adaptiv(font-size, 24, 15, 1200, 320);
@@ -60,10 +60,10 @@
 	}
 
 	h4 {
-		font-weight: 700;
-		font-size: 20px;
-		line-height: lh(30, 20);
-		letter-spacing: 0.05em;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 1.33;
+		color: #000000;
 		text-transform: uppercase;
 		@media (max-width: 1200px) {
 			@include adaptiv(font-size, 20, 14, 1200, 320);
@@ -71,10 +71,10 @@
 	}
 
 	h5 {
-		font-weight: 700;
-		font-size: 16px;
-		line-height: lh(30, 16);
-		letter-spacing: 0.05em;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 1.42;
+		color: #000000;
 		text-transform: uppercase;
 		@media (max-width: 992px) {
 			@include adaptiv(font-size, 16, 13, 992, 320);
@@ -82,15 +82,14 @@
 	}
 	ul,
 	ol {
-		margin-bottom: 23px;
 		li {
 			font-size: 20px;
-			line-height: 1.5;
+			line-height: 1.67;
 			@media (max-width: 992px) {
 				@include adaptiv(font-size, 20, 15, 992, 320);
 			}
 			&:not(:last-child) {
-				margin-bottom: 15px;
+				margin-bottom: 20px;
 				@media (max-width: 992px) {
 					@include adaptiv(margin-bottom, 15, 7, 992, 320);
 				}
@@ -100,17 +99,13 @@
 
 	ul li {
 		position: relative;
-		padding-left: 10px;
+		padding-left: 20px;
 		&::before {
-			content: "";
+			content: "~";
 			position: absolute;
-			top: 0.6em;
+			top: 0;
 			left: 0;
-			width: 4px;
-			height: 4px;
-			border-radius: 100%;
-			background-color: #8ca03a;
-			overflow: hidden;
+			color: $gold;
 		}
 	}
 	ol {
@@ -122,11 +117,11 @@
 		}
 		li::before {
 			counter-increment: type;
-			content: counter(type) "/";
+			content: counter(type) "-";
 			position: absolute;
 			top: 0.05em;
 			left: 0;
-			color: #8ca03a;
+			color: $gold;
 		}
 	}
 	.table {
@@ -136,7 +131,7 @@
 		border-collapse: collapse;
 		width: 100%;
 		min-width: 420px;
-		font-size: 16px;
+		font-size: 18px;
 		@media (max-width: 768px) {
 			font-size: 15px;
 		}
@@ -144,16 +139,16 @@
 			font-size: 14px;
 		}
 		th {
-			padding: 15px 30px;
-			line-height: 1.62;
-			letter-spacing: 0.05em;
+			padding: 15px 25px;
+			line-height: 1.5;
 			text-transform: uppercase;
 			color: #ffffff;
-			border-left: 3px solid #fff;
-			border-right: 3px solid #fff;
-			background: #000000;
+			border-left: 1px solid #fff;
+			border-right: 1px solid #fff;
+			border-bottom: 1px solid #fff;
+			background: $gold;
 			text-align: left;
-			font-weight: 400;
+			font-weight: 700;
 			@media (max-width: 992px) {
 				padding: 10px 20px;
 			}
@@ -169,11 +164,9 @@
 		}
 		td {
 			padding: 20px 34px;
-			line-height: 1.62;
-			letter-spacing: 0.05em;
+			line-height: 1.5;
 			color: #000;
-			border-left: 3px solid #fff;
-			border-right: 3px solid #fff;
+			border: 1px solid $gold;
 			@media (max-width: 992px) {
 				padding: 10px 20px;
 			}
@@ -189,9 +182,13 @@
 		}
 		tr {
 			background: #fff;
-		}
-		tr:nth-child(2n + 1) {
-			background: #f4f4f4;
+			td:first-child {
+				background: #e5e5e5;
+				font-size: 16px;
+				letter-spacing: 0.2em;
+				border-bottom: 1px solid #fff;
+				border-right: 1px solid #fff;
+			}
 		}
 	}
 }

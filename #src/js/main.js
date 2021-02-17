@@ -31,19 +31,20 @@ $(document).ready(function () {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		loop: false,
+		pagination: {
+			el: '.hero-pagination',
+			clickable: true,
+			renderBullet: function (index, className) {
+				return '<div class="' + className + '">' + '<span>' + (index + 1) + '</span></div>';
+			}
+		},
 		// loopedSlides: 1,
 		// slideToClickedSlide: true,
-		breakpoints: {
-			993: {
-				pagination: {
-					el: '.hero-pagination',
-					clickable: true,
-					renderBullet: function (index, className) {
-						return '<div class="' + className + '">' + '<span>' + (index + 1) + '</span></div>';
-					}
-				},
-			},
-		}
+		// breakpoints: {
+		// 	993: {
+
+		// 	},
+		// }
 	});
 
 
@@ -68,6 +69,41 @@ $(document).ready(function () {
 		}
 	});
 
+	function mobileSlider() {
+		if ($(window).innerWidth() <= 1100) {
+			slider_product_main = new Swiper('.new__slider', {
+				slidesPerView: 2,
+				spaceBetween: 40,
+				navigation: {
+					nextEl: '.new-slider--prev',
+					prevEl: '.new-slider--next',
+				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 45,
+					},
+					376: {
+						slidesPerView: 1,
+						spaceBetween: 45,
+					},
+					630: {
+						slidesPerView: 2,
+						spaceBetween: 45,
+					},
+				}
+			});
+		}
+
+		else {
+			if ($('.new__slider').hasClass('swiper-container-initialized')) {
+				slider_catalog.destroy();
+			}
+		}
+	}
+
+	mobileSlider()
+
 
 
 	// Fancy-box
@@ -79,12 +115,11 @@ $(document).ready(function () {
 	// 	buttons: '',
 	// });
 
-	// $('[data-fancybox="to-privacy"]').fancybox({
-	// 	src: '#modal',
-	// 	touch: 'false',
-	// 	smallBtn: false,
-	// 	buttons: '',
-	// });
+	$('[data-src="#modal-polit"]').fancybox({
+		touch: 'false',
+		smallBtn: false,
+		buttons: '',
+	});
 
 	// Input-mask
 	// $('input[type="tel"]').inputmask({ "mask": "+7 (999)-999-99-99" });

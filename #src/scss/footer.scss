@@ -115,6 +115,10 @@
 		font-size: 18px;
 		line-height: 1.67;
 		color: #ffffff;
+		transition: 0.3s;
+		&:hover {
+			color: $gold;
+		}
 	}
 	// .right-footer__department
 	&__department {

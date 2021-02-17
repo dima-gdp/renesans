@@ -1,12 +1,11 @@
 .hero {
-	max-width: 1640px;
 	width: 100%;
 	margin: 0 auto;
 	// .hero__slider
 	&__slider {
 		overflow: hidden;
 		position: relative;
-		margin-right: calc((100vw - 100%) / -2);
+		// margin-right: calc((100vw - 100%) / -2);
 		.hero-pagination {
 			position: absolute;
 			top: 39%;
@@ -18,6 +17,28 @@
 				left: auto;
 				right: 105px;
 			}
+			@media (max-width: 1300px) {
+				right: 60px;
+			}
+			@media (max-width: 992px) {
+				top: auto;
+				bottom: 15px;
+				left: 40px;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				margin: 0 -10px;
+				max-width: none;
+			}
+			@media (max-width: 768px) {
+				left: 20px;
+			}
+			@media (max-width: 576px) {
+				margin: 0 -5px;
+			}
+			@media (max-width: 374px) {
+				bottom: 5px;
+			}
 		}
 		.swiper-pagination-bullet {
 			position: static;
@@ -26,11 +47,21 @@
 			justify-content: space-between;
 			width: 100%;
 			height: auto;
-			margin: 0px 0px 25px 0px !important;
+			margin: 0px 10px 10px 10px !important;
 			background: transparent;
 			border-radius: none;
 			opacity: 1;
 			border-radius: 0;
+			@media (max-width: 992px) {
+				width: 60px;
+			}
+			@media (max-width: 768px) {
+				width: 41px;
+			}
+			@media (max-width: 576px) {
+				margin: 0px 5px 5px 5px !important;
+			}
+
 			&::after {
 				content: "";
 				height: 1px;
@@ -38,6 +69,11 @@
 				background: #fff;
 				margin-left: 21px;
 				transition: 0.3s;
+				@media (max-width: 992px) {
+					margin-left: 0;
+					height: 2px;
+					width: 100%;
+				}
 			}
 
 			span {
@@ -46,12 +82,19 @@
 				visibility: hidden;
 				opacity: 0;
 				transition: 0.3s;
+				@media (max-width: 992px) {
+					display: none;
+				}
 			}
 		}
 		.swiper-pagination-bullet-active {
 			&::after {
 				content: "";
 				width: 63px;
+				@media (max-width: 992px) {
+					width: 100%;
+					opacity: 0.4;
+				}
 			}
 			span {
 				visibility: visible;
@@ -66,7 +109,11 @@
 	// .hero-slide__img
 	&__img {
 		position: relative;
-		padding-bottom: 36.46%;
+		padding-bottom: 36.5%;
+		@media (max-width: 576px) {
+			padding-bottom: 46%;
+		}
+
 		img {
 			position: absolute;
 			top: 0;
@@ -104,6 +151,17 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		padding-bottom: 90px;
+		padding-right: 300px;
+		@media (max-width: 1710px) {
+			padding-right: 250px;
+			@include adaptiv(padding-bottom, 90, 35, 1710, 320);
+		}
+		@media (max-width: 1300px) {
+			padding-right: 212px;
+		}
+		@media (max-width: 992px) {
+			padding-right: 40px;
+		}
 	}
 	// .hero-slide__title
 	&__title {
@@ -113,6 +171,10 @@
 		line-height: lh(124, 96);
 		text-transform: uppercase;
 		color: #ffffff;
+		@media (max-width: 1919px) {
+			@include adaptiv(font-size, 96, 35, 1919, 320);
+			@include adaptiv(margin-bottom, 24, 9, 1919, 320);
+		}
 	}
 	// .hero-slide__subtitle
 	&__subtitle {
@@ -121,6 +183,9 @@
 		letter-spacing: 0.3em;
 		text-transform: uppercase;
 		color: #ffffff;
+		@media (max-width: 1919px) {
+			@include adaptiv(font-size, 20, 13, 1919, 320);
+		}
 	}
 }
 .hero-pagination {
