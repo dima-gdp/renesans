@@ -1,0 +1,64 @@
+@@include('header.html')
+
+
+<div class="main">
+	<section class="contacts">
+		<div class="contacts__container container">
+			@@include('breadcrumbs.html')
+			<h1 class="contacts__title title">Контакты</h1>
+			<div class="contacts__flex">
+				<div class="contacts__left">
+
+					<div class="contacts__item">
+						<div class="contacts__decor">
+							<div class="contacts__image">
+								<img src="img/tel.svg" alt="">
+							</div>
+						</div>
+						<div class="contacts__content contacts-tels">
+							<div class="contacts-tels__row">
+								<a href="" class="contacts-tels__link">(8172) 75-10-10
+								</a>
+								<div class="contacts-tels__name">Отдел продаж</div>
+							</div>
+							<div class="contacts-tels__row">
+								<a href="" class="contacts-tels__link">(8172) 20-10-42</a>
+								<div class="contacts-tels__name">Секретарь</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="contacts__item">
+						<div class="contacts__decor">
+							<div class="contacts__image">
+								<img src="img/map.svg" alt="">
+							</div>
+						</div>
+						<div class="contacts__content">
+							<p class="contacts__text">г. Вологда,<br>
+								ул. Зосимовская, д. 75,
+								стр. 1, 2 этаж</p>
+						</div>
+					</div>
+
+					<div class="contacts__item">
+						<div class="contacts__decor">
+							<div class="contacts__image">
+								<img src="img/tel.svg" alt="">
+							</div>
+						</div>
+						<div class="contacts__content">
+							<a href="" class="contacts__text">renessans.sk@mail.ru</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="contacts__right">
+					<div id="map" class="contacts__map"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+@@include('footer.html')

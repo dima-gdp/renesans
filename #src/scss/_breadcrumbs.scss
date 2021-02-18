@@ -1,30 +1,44 @@
 .breadcrumbs {
-	padding-bottom: 39px;
-	padding-top: 33px;
+	padding-bottom: 43px;
+	padding-top: 40px;
 	@media (max-width: 1640px) {
-		@include adaptiv(padding-bottom, 39, 20, 1600, 320);
-		@include adaptiv(padding-top, 33, 20, 1600, 320);
+		@include adaptiv(padding-bottom, 43, 20, 1600, 320);
+		@include adaptiv(padding-top, 40, 20, 1600, 320);
 	}
 	&__container {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		a,
-		span {
+		.post,
+		.home {
 			font-size: 14px;
-			line-height: 1.86;
-			letter-spacing: 0.05em;
-			color: #000000;
-			@media (max-width: 576px) {
+			line-height: lh(19, 14);
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			color: #766153;
+			margin-right: 20px;
+			margin-left: 20px;
+			@media (max-width: 1440px) {
+				@include adaptiv(margin-right, 20, 8, 1440, 320);
+				@include adaptiv(margin-left, 20, 8, 1440, 320);
+			}
+			@media (max-width: 992px) {
 				font-size: 13px;
+			}
+			@media (max-width: 768px) {
+				font-size: 12px;
+			}
+			@media (max-width: 420px) {
+				font-size: 11px;
+			}
+			@media (max-width: 374px) {
+				font-size: 10px;
 			}
 		}
 	}
 	// .breadcrumbs__break
 	&__break {
-		margin-left: 7px;
-		margin-right: 7px;
-		width: 32px;
+		width: 43px;
 		height: 7px;
 		background: url("../img/break.svg") center / contain no-repeat;
 		@media (max-width: 576px) {

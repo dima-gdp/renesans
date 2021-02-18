@@ -1,14 +1,29 @@
 .projects {
+	&--single {
+		.projects__container {
+			padding-top: 0;
+		}
+	}
 	// .projects__container
 	&__container {
 		padding-bottom: 167px;
 		padding-top: 87px;
 		background: url("../img/gold.svg") 123% 91.5% no-repeat;
+		@media (max-width: 1919px) {
+			@include adaptiv(padding-top, 87, 50, 1919, 320);
+			@include adaptiv(padding-bottom, 167, 50, 1919, 320);
+		}
+		@media (max-width: 992px) {
+			background: none;
+		}
 	}
 	// .projects__title
 	&__title {
 		margin-bottom: 65px;
 		color: #000;
+		@media (max-width: 1919px) {
+			@include adaptiv(margin-bottom, 65, 40, 1919, 320);
+		}
 	}
 	// .projects__grid
 	&__grid {
@@ -106,7 +121,7 @@
 			@include adaptiv(margin-bottom, 15, 5, 576, 375);
 		}
 		@media (max-width: 374px) {
-			font-size: 16px;
+			font-size: 15px;
 			margin-bottom: 5px;
 		}
 	}
@@ -130,8 +145,8 @@
 			@include adaptiv(margin-bottom, 30, 15, 576, 375);
 		}
 		@media (max-width: 374px) {
-			font-size: 30px;
-			margin-bottom: 15px;
+			font-size: 23px;
+			margin-bottom: 10px;
 		}
 	}
 	// .item-project__link
@@ -154,6 +169,12 @@
 			transition-duration: 0.5s;
 			transition-timing-function: cubic-bezier(0.3, 0.1, 0.3, 1);
 			transition-delay: 0.1s;
+		}
+		@media (max-width: 374px) {
+			font-size: 15px;
+			&::before {
+				top: 0.6em;
+			}
 		}
 	}
 

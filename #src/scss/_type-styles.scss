@@ -34,7 +34,7 @@
 		text-transform: uppercase;
 		color: #000000;
 		@media (max-width: 1200px) {
-			@include adaptiv(font-size, 36, 25, 1200, 320);
+			@include adaptiv(font-size, 36, 21, 1200, 320);
 		}
 	}
 	h2 {
@@ -44,7 +44,7 @@
 		color: #000000;
 		text-transform: uppercase;
 		@media (max-width: 1200px) {
-			@include adaptiv(font-size, 30, 16, 1200, 320);
+			@include adaptiv(font-size, 30, 20, 1200, 320);
 		}
 	}
 
@@ -55,7 +55,7 @@
 		color: #000000;
 		text-transform: uppercase;
 		@media (max-width: 1200px) {
-			@include adaptiv(font-size, 24, 15, 1200, 320);
+			@include adaptiv(font-size, 24, 19, 1200, 320);
 		}
 	}
 
@@ -66,7 +66,7 @@
 		color: #000000;
 		text-transform: uppercase;
 		@media (max-width: 1200px) {
-			@include adaptiv(font-size, 20, 14, 1200, 320);
+			@include adaptiv(font-size, 20, 18, 1200, 320);
 		}
 	}
 
@@ -77,7 +77,7 @@
 		color: #000000;
 		text-transform: uppercase;
 		@media (max-width: 992px) {
-			@include adaptiv(font-size, 16, 13, 992, 320);
+			@include adaptiv(font-size, 16, 17, 992, 320);
 		}
 	}
 	ul,

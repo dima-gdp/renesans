@@ -53,19 +53,30 @@ $(document).ready(function () {
 		spaceBetween: 40,
 		loop: false,
 		navigation: {
-			nextEl: '.nav-slider--prev',
-			prevEl: '.nav-slider--next',
+			nextEl: '.nav-slider--next',
+			prevEl: '.nav-slider--prev',
 		},
 		breakpoints: {
-			// 993: {
-			// 	pagination: {
-			// 		el: '.hero-pagination',
-			// 		clickable: true,
-			// 		renderBullet: function (index, className) {
-			// 			return '<div class="' + className + '">' + '<span>' + (index + 1) + '</span></div>';
-			// 		}
-			// 	},
-			// },
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 20,
+			},
+			375: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			576: {
+				slidesPerView: 3,
+				spaceBetween: 40,
+			},
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 40,
+			},
+			993: {
+				slidesPerView: 5,
+				spaceBetween: 40,
+			},
 		}
 	});
 
@@ -143,25 +154,28 @@ $(document).ready(function () {
 	// })
 
 	// Яндекс карта
-	// ymaps.ready(function () {
-	// 	var myMap = new ymaps.Map(getMap, {
-	// 		center: [52.05693880953456, 118.68705543322154],
-	// 		zoom: 4
-	// 	});
+	if (document.getElementById('map')) {
+		ymaps.ready(function () {
+			var myMap = new ymaps.Map('map', {
+				center: [59.21453736676941, 39.89706232681222],
+				zoom: 16
+			});
 
-	// 	var myPlacemark = new ymaps.Placemark([55.54055193739615, 108.71146949572154], {
-	// 		hintContent: 'г. Борисоглебск, ул. Победы, д. 66',
-	// 		balloonContent: 'г. Борисоглебск, ул. Победы, д. 66'
-	// 	},
-	// 		{
-	// 			preset: 'islands#redIcon',
-	// 			iconLayout: 'default#image',
-	// 			iconImageSize: [20, 28],
-	// 			iconImageOffset: [-19, -52]
-	// 		});
+			var myPlacemark = new ymaps.Placemark([59.21453736676941, 39.89706232681222], {
+				hintContent: 'Козленская улица, 43Ак2',
+				balloonContent: 'Козленская улица, 43Ак2'
+			},
+				{
+					preset: 'islands#redIcon',
+					iconLayout: 'default#image',
+					iconImageHref: '../img/map.svg',
+					iconImageSize: [24, 35],
+					// iconImageOffset: [-19, -52]
+				});
 
-	// 	myMap.geoObjects.add(myPlacemark);
-	// });
+			myMap.geoObjects.add(myPlacemark);
+		});
+	}
 
 
 	// Alertify

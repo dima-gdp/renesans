@@ -1,5 +1,9 @@
 .art {
 	margin-bottom: 164px;
+	@media (max-width: 1440px) {
+		@include adaptiv(margin-bottom, 164, 50, 1440, 320);
+	}
+
 	// .art__container
 	&__container {
 	}

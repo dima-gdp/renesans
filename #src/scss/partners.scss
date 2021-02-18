@@ -1,5 +1,8 @@
 .partners {
 	margin-bottom: 191px;
+	@media (max-width: 1920px) {
+		@include adaptiv(margin-bottom, 191, 30, 1920, 320);
+	}
 	// .partners__container
 	&__container {
 	}
@@ -7,10 +10,24 @@
 	&__title {
 		margin-bottom: 77px;
 		color: #000;
+		@media (max-width: 1440px) {
+			@include adaptiv(margin-bottom, 77, 20, 1440, 320);
+		}
 	}
 	// .partners__slider-wrapper
 	&__slider-wrapper {
 		position: relative;
+		padding-left: 80px;
+		padding-right: 80px;
+
+		@media (max-width: 992px) {
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+		@media (max-width: 576px) {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
 	}
 	// .partners__slider
 	&__slider {
@@ -24,6 +41,8 @@
 	}
 	// .partners__logo
 	&__logo {
+		display: flex;
+		justify-content: center;
 		img {
 			max-height: 172px;
 		}
@@ -51,15 +70,24 @@
 	background: transparent;
 	overflow: hidden;
 	transition: 0.3s;
+
+	@media (max-width: 992px) {
+		width: 30px;
+		height: 30px;
+	}
+
+	@media (min-width: 993px) {
+		&:hover {
+			background: $gold;
+			svg path {
+				fill: #fff;
+			}
+		}
+	}
+
 	svg path {
 		fill: $gold;
 		transition: 0.3s;
-	}
-	&:hover {
-		background: $gold;
-		svg path {
-			fill: #fff;
-		}
 	}
 }
 
