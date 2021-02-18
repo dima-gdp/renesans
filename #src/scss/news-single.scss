@@ -1,6 +1,8 @@
 .catalog {
+	background: #20283c;
 	// .catalog__container
 	&__container {
+		padding-bottom: 195px;
 	}
 	// .catalog__title
 	&__title {
@@ -13,12 +15,21 @@
 	}
 	// .catalog__slider
 	&__slider {
+		overflow: hidden;
 	}
 	// .catalog__control
 	&__control {
 	}
 	// .catalog__pagination
 	&__pagination {
+	}
+	.swiper-slide {
+		width: 378px;
+		// width: calc((100% - 192px) * 0.26);
+	}
+	.swiper-slide-active {
+		width: 589px;
+		// width: calc((100% - 192px) * 0.406);
 	}
 }
 

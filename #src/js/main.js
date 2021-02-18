@@ -115,6 +115,35 @@ $(document).ready(function () {
 		}
 	}
 
+	const slider_news = new Swiper('.catalog__slider', {
+		slidesPerView: 'auto',
+		spaceBetween: 146,
+		loop: true,
+		loopedSlides: 3,
+		observeParents: true,
+		observeSlideChildren: true,
+		observer: true,
+		// centeredSlides: true,
+		pagination: {
+			el: '.catalog__pagination',
+			clickable: true,
+			renderBullet: function (index, className) {
+				return '<div class="' + className + '">' + (index + 1) + '</div>';
+			}
+		},
+		navigation: {
+			nextEl: '.catalog--next',
+			prevEl: '.catalog--prev',
+		},
+		// loopedSlides: 1,
+		// slideToClickedSlide: true,
+		// breakpoints: {
+		// 	993: {
+
+		// 	},
+		// }
+	});
+
 	mobileSlider()
 
 
