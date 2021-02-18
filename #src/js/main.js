@@ -10,20 +10,22 @@ $(document).ready(function () {
 	// 	})
 	// }
 
-	// function toggleTabs(top, bottom, topActive) {
-	// 	$(top).on('click', function (ev) {
-	// 		let text = $(this).next(bottom);
+	function toggleTabs(top, bottom, topActive) {
+		$(top).on('click', function (ev) {
+			let text = $(this).next(bottom);
 
-	// 		if ($(this).hasClass(topActive)) {
-	// 			text.stop().slideUp();
-	// 			$(this).removeClass(topActive)
-	// 		}
-	// 		else {
-	// 			$(this).addClass(topActive)
-	// 			text.stop().slideDown();
-	// 		}
-	// 	})
-	// }
+			if ($(this).hasClass(topActive)) {
+				text.stop().slideUp();
+				$(this).removeClass(topActive)
+			}
+			else {
+				$(this).addClass(topActive)
+				text.stop().slideDown();
+			}
+		})
+	}
+
+	toggleTabs('.toggle__top', '.toggle__bot', 'toggle__top--active')
 
 
 	// Swiper
