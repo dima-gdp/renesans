@@ -1,0 +1,78 @@
+.modal-home {
+	display: none;
+	max-width: 770px;
+	padding: 30px !important;
+	// .modal-home__container
+	&__container {
+	}
+	// .modal-home__top
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+	// .modal-home__btn
+	&__btn {
+		margin-right: 20px;
+		font-size: 18px;
+		line-height: 1.57;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #ffffff;
+		background: #9e8c73;
+		max-width: 248px;
+		width: 100%;
+		min-height: 55px;
+	}
+	// .modal-home__close
+	&__close {
+		display: flex;
+		align-items: center;
+		height: 28px;
+		padding-left: 44px;
+		font-size: 18px;
+		color: #9e8c73;
+		position: relative;
+		background: transparent;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 28px;
+			height: 28px;
+			background: url("../img/close-modal.svg") center / contain no-repeat;
+		}
+	}
+	// .modal-home__main
+	&__main {
+	}
+	// .modal-home__slider
+	&__slider {
+	}
+	// .modal-home__image
+	&__image {
+	}
+	// .modal-home__table
+	&__table {
+	}
+}
+.btn {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.modal-home--prev {
+}
+.modal-home--next {
+}
+.table-descr {
+	// .table-descr__row
+	&__row {
+	}
+	// .table-descr__item
+	&__item {
+	}
+}

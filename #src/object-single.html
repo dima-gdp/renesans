@@ -110,7 +110,7 @@
 							<div class="table-descr__item">Площадь</div>
 							<div class="table-descr__item">Номер квартиры</div>
 						</div>
-						<div class="table-descr__row">
+						<div class="table-descr__row" data-src="#home-modal">
 							<div class="table-descr__item">1</div>
 							<div class="table-descr__item">4</div>
 							<div class="table-descr__item">41,2 м2</div>
@@ -159,10 +159,10 @@
 				<div class="descr__right">
 					<div class="descr-form">
 						<div class="descr-form__image">
-							<img src="" alt="">
+							<img src="img/girl.jpg" alt="">
 						</div>
-						<p class="descr-form__name"></p>
-						<div class="descr-form__position"></div>
+						<p class="descr-form__name">Симонова Екатерина Васильевна</p>
+						<div class="descr-form__position">Ваш консультант по ЖК «Онегин»</div>
 						<form class="wpcf7-form">
 							<span class="wpcf7-form-control-wrap">
 								<input type="text" placeholder="Ваше имя">
@@ -170,16 +170,122 @@
 							<span class="wpcf7-form-control-wrap">
 								<input type="tel" placeholder="Номер телефона">
 							</span>
-							<button type="submit" class="descr-form btn hvr-sweep-to-right">Отправить</button>
+							<button type="submit" class="descr-form__btn btn hvr-sweep-to-right">Отправить</button>
 						</form>
 						<p class="descr-form__privacy">
-							Нажимая кнопку «Узнать всё», я принимаю <a data-src="#modal-polit">политику конфиденциальности сайта</a>
+							Нажимая кнопку «Отправить», я принимаю <a data-src="#modal-polit">политику конфиденциальности сайта</a>
 						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<section class="online">
+		<div class="online__container container">
+			<h2 class="online__title">ОНЛАЙН-ТРАНСЛЯЦИЯ СО СТРОИТЕЛЬНОГО УЧАСТКА
+			</h2>
+		</div>
+		<div class="online__block">
+			<div class="online__grid container">
+				<div class="online__column">
+					<a href="#" class="online__item item-online">
+						<div class="item-online__image">
+							<img src="img/online-1.jpg" alt="">
+						</div>
+						<div class="item-online__text">
+							<div class="item-online__wrapper">
+								<span class="item-online__icon"></span>
+								<div class="item-online__title">Корпус №1</div>
+								<div class="item-online__content">
+									<p>ЖК «Онегин»</p>
+									<p>Онлайн трансляция с участка</p>
+								</div>
+							</div>
+
+						</div>
+					</a>
+				</div>
+				<div class="online__column">
+					<a href="#" class="online__item item-online">
+						<div class="item-online__image">
+							<img src="img/online-1.jpg" alt="">
+						</div>
+						<div class="item-online__text">
+							<div class="item-online__wrapper">
+								<span class="item-online__icon"></span>
+								<div class="item-online__title">Корпус №1</div>
+								<div class="item-online__content">
+									<p>ЖК «Онегин»</p>
+									<p>Онлайн трансляция с участка</p>
+								</div>
+							</div>
+
+						</div>
+					</a>
+				</div>
+				<div class="online__column">
+					<a href="#" class="online__item item-online">
+						<div class="item-online__image">
+							<img src="img/online-1.jpg" alt="">
+						</div>
+						<div class="item-online__text">
+							<div class="item-online__wrapper">
+								<span class="item-online__icon"></span>
+								<div class="item-online__title">Корпус №1</div>
+								<div class="item-online__content">
+									<p>ЖК «Онегин»</p>
+									<p>Онлайн трансляция с участка</p>
+								</div>
+							</div>
+
+						</div>
+					</a>
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<div class="gallery">
+		<div class="gallery__container container">
+			<div class="gallery__slider">
+				<div class="swiper-wrapper">
+					<a href="img/gal-1.jpg" class="swiper-slide" data-fancybox="gal">
+						<div class="gallery__img">
+							<img src="img/gal-1.jpg" alt="">
+						</div>
+					</a>
+					<a href="img/gal-2.jpg" class="swiper-slide" data-fancybox="gal">
+						<div class="gallery__img">
+							<img src="img/gal-2.jpg" alt="">
+						</div>
+					</a>
+					<a href="img/gal-3.jpg" class="swiper-slide" data-fancybox="gal">
+						<div class="gallery__img">
+							<img src="img/gal-3.jpg" alt="">
+						</div>
+					</a>
+					<a href="img/gal-4.jpg" class="swiper-slide" data-fancybox="gal">
+						<div class="gallery__img">
+							<img src="img/gal-4.jpg" alt="">
+						</div>
+					</a>
+					<a href="img/gal-4.jpg" class="swiper-slide" data-fancybox="gal">
+						<div class="gallery__img">
+							<img src="img/gal-4.jpg" alt="">
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="gallery__control">
+				<button class="gallery__btn gallery--prev">@@include('img/arrow-slider.svg')</button>
+				<div class="gallery__pagination"></div>
+				<button class="gallery__btn gallery--next">@@include('img/arrow-slider.svg')</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 @@include('footer.html')

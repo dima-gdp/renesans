@@ -170,6 +170,14 @@ p[data-src="#modal-polit"] {
 		transform: translateX(-100%);
 	}
 }
+@keyframes round {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
 
 [data-aos="branch"] {
 	transition-property: transform;

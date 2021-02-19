@@ -116,10 +116,12 @@ $(document).ready(function () {
 	}
 
 	const slider_news = new Swiper('.catalog__slider', {
-		slidesPerView: 'auto',
+		slidesPerView: 1,
+		speed: 900,
+		autoHeight: true,
 		spaceBetween: 146,
-		loop: true,
-		loopedSlides: 3,
+		loop: false,
+		loopedSlides: 2,
 		observeParents: true,
 		observeSlideChildren: true,
 		observer: true,
@@ -144,6 +146,103 @@ $(document).ready(function () {
 		// }
 	});
 
+	function addZero(number) {
+
+		if (number < 10) {
+
+			return '0' + number;
+
+		} else {
+
+			return number;
+
+		}
+
+	}
+
+	const slider_gal = new Swiper('.gallery__slider', {
+		slidesPerView: 4,
+		spaceBetween: 40,
+		loop: false,
+		loopedSlides: 2,
+		observeParents: true,
+		observeSlideChildren: true,
+		observer: true,
+		// centeredSlides: true,
+		pagination: {
+			el: '.gallery__pagination',
+			type: 'custom',
+			renderCustom: function (swiper, current, total) {
+				return '<span class="gallery__current">' + addZero(current) + '</span>' +
+					'<span class="gallery__sepor"></span>' +
+					'<span class="gallery__total">' + addZero(total) + '</span>';
+			}
+		},
+		navigation: {
+			nextEl: '.gallery--next',
+			prevEl: '.gallery--prev',
+		},
+		loopedSlides: 1,
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			420: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			520: {
+				slidesPerView: 2,
+				spaceBetween: 40,
+			},
+			686: {
+				slidesPerView: 3,
+				spaceBetween: 40,
+			},
+			686: {
+				slidesPerView: 4,
+				spaceBetween: 40,
+			},
+
+		}
+	});
+
+	const slider_modal = new Swiper('.modal-home__slider', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		loop: false,
+		loopedSlides: 2,
+		observeParents: true,
+		observeSlideChildren: true,
+		observer: true,
+		navigation: {
+			nextEl: '.modal-home--next',
+			prevEl: '.modal-home--prev',
+		},
+		// breakpoints: {
+		// 	320: {
+		// 		slidesPerView: 1,
+		// 	},
+		// 	420: {
+		// 		slidesPerView: 2,
+		// 		spaceBetween: 20,
+		// 	},
+		// 	520: {
+		// 		slidesPerView: 2,
+		// 		spaceBetween: 40,
+		// 	},
+		// 	686: {
+		// 		slidesPerView: 3,
+		// 		spaceBetween: 40,
+		// 	},
+		// 	686: {
+		// 		slidesPerView: 4,
+		// 		spaceBetween: 40,
+		// 	},
+
+		// }
+	});
+
 	mobileSlider()
 
 
@@ -161,6 +260,18 @@ $(document).ready(function () {
 		touch: 'false',
 		smallBtn: false,
 		buttons: '',
+	});
+
+	$('[data-src="#home-modal"]').fancybox({
+		touch: 'false',
+		smallBtn: false,
+		buttons: '',
+	});
+
+	$('[data-fancybox="gal"]').fancybox({
+		backFocus: false,
+		// autoFocus: false,
+		// hash: false,
 	});
 
 	// Input-mask
