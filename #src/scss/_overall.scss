@@ -23,6 +23,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+	&--visible {
+		overflow: visible;
+	}
 }
 
 .main {
@@ -189,7 +192,6 @@ p[data-src="#modal-polit"] {
 }
 
 .hvr-sweep-to-right {
-	display: inline-block;
 	vertical-align: middle;
 	-webkit-transform: perspective(1px) translateZ(0);
 	transform: perspective(1px) translateZ(0);

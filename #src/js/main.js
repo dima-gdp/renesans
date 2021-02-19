@@ -249,12 +249,11 @@ $(document).ready(function () {
 
 	// Fancy-box
 
-	// $('[data-fancybox="to-modal"]').fancybox({
-	// 	src: '#modal',
-	// 	touch: 'false',
-	// 	smallBtn: false,
-	// 	buttons: '',
-	// });
+	$('[data-src="#modal-call"]').fancybox({
+		touch: 'false',
+		smallBtn: false,
+		buttons: '',
+	});
 
 	$('[data-src="#modal-polit"]').fancybox({
 		touch: 'false',
