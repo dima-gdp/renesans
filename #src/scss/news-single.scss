@@ -12,40 +12,122 @@
 	// .catalog__links
 	&__links {
 		display: flex;
+		padding-left: 40px;
+		margin: 0 -40px;
+		li {
+			padding: 0px 40px 20px 40px;
+			position: relative;
+
+			&.current {
+				&::before {
+					content: "";
+					position: absolute;
+					top: -27px;
+					left: 0;
+					width: 80px;
+					height: 80px;
+					border-radius: 100%;
+					background: transparent;
+					border: 1px solid $gold;
+				}
+				a {
+					color: #fff;
+				}
+			}
+		}
+		a {
+			font-size: 18px;
+			line-height: lh(25, 18);
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			color: #9e8c73;
+		}
 	}
 	// .catalog__block
 	&__block {
 		overflow: hidden;
+		margin-top: 88px;
 	}
 	// .catalog__slider
 	&__slider {
 		max-width: 589px;
 		width: 100%;
+		margin-bottom: 100px;
 	}
 	// .catalog__control
 	&__control {
+		padding-top: 29px;
+		border-top: 1px solid #9e8c73;
+		position: relative;
 	}
 	// .catalog__pagination
 	&__pagination {
+		display: flex;
+		justify-content: space-between;
+		padding-left: 100px;
+		padding-right: 100px;
+		margin: 0 -50px;
+		.swiper-pagination-bullet {
+			margin: 0px 50px 30px 50px;
+			width: auto;
+			height: auto;
+			border-radius: 0;
+			opacity: 1;
+			background: transparent;
+			font-size: 18px;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			color: #9e8c73;
+			position: relative;
+		}
+		.swiper-pagination-bullet-active {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: 150px;
+				height: 150px;
+				transform: translate(-50%, -70%);
+				border-radius: 100%;
+				background-color: transparent;
+				border: 1px solid #9e8c73;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, -95px);
+				width: 55px;
+				height: 55px;
+				background: url("../img/star.svg") center / contain no-repeat;
+			}
+		}
 	}
 	.swiper-slide {
 		height: 100%;
 		transition: 0.7s;
-		// width: calc((100% - 192px) * 0.26);
 	}
 	.swiper-slide-active {
-		// width: calc((100% - 192px) * 0.406);
 	}
 	.swiper-slide-next {
-		padding-top: 200px;
+		display: flex;
+		align-items: flex-end;
 		.item-new {
 			max-width: 378px;
+		}
+		.item-new__subtitle {
+			display: none;
 		}
 
 		& + .swiper-slide {
 			.item-new {
 				max-width: 378px;
 				transform: translateX(-245px);
+			}
+			.item-new__subtitle {
+				display: none;
 			}
 		}
 	}
@@ -78,7 +160,24 @@
 	}
 }
 
+.catalog--prev,
+.catalog--next {
+	position: absolute;
+	top: 25px;
+	background-color: transparent;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	svg path {
+		fill: $gold;
+	}
+}
 .catalog--prev {
+	left: 0;
+	transform: rotate(180deg);
 }
 .catalog--next {
+	right: 0;
 }

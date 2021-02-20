@@ -32,6 +32,10 @@ $(document).ready(function () {
 	const slider_hero = new Swiper('.hero__slider', {
 		slidesPerView: 1,
 		spaceBetween: 0,
+		autoplay: {
+			delay: 3000,
+		},
+		speed: 700,
 		loop: false,
 		pagination: {
 			el: '.hero-pagination',
@@ -130,7 +134,7 @@ $(document).ready(function () {
 			el: '.catalog__pagination',
 			clickable: true,
 			renderBullet: function (index, className) {
-				return '<div class="' + className + '">' + (index + 1) + '</div>';
+				return '<div class="' + className + '">' + addZero(index + 1) + '</div>';
 			}
 		},
 		navigation: {
@@ -139,11 +143,17 @@ $(document).ready(function () {
 		},
 		// loopedSlides: 1,
 		// slideToClickedSlide: true,
-		// breakpoints: {
-		// 	993: {
-
-		// 	},
-		// }
+		breakpoints: {
+			320: {
+				spaceBetween: 146,
+			},
+			1440: {
+				spaceBetween: 146,
+			},
+			1733: {
+				spaceBetween: 146,
+			},
+		}
 	});
 
 	function addZero(number) {
@@ -253,6 +263,13 @@ $(document).ready(function () {
 		touch: 'false',
 		smallBtn: false,
 		buttons: '',
+		afterShow: function (instance, current) {
+			console.info(instance);
+			$(current.src).find('.modal-call__decor').addClass('active')
+		},
+		beforeClose: function (instance, current) {
+			$(current.src).find('.modal-call__decor').removeClass('active')
+		}
 	});
 
 	$('[data-src="#modal-polit"]').fancybox({
@@ -275,8 +292,6 @@ $(document).ready(function () {
 
 	// Input-mask
 	// $('input[type="tel"]').inputmask({ "mask": "+7 (999)-999-99-99" });
-
-
 
 
 	// Menu-burger

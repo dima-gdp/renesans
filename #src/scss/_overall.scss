@@ -163,6 +163,10 @@ p[data-src="#modal-polit"] {
 	color: $gold;
 }
 
+[data-src="#modal-call"] {
+	cursor: pointer;
+}
+
 // Анимации
 
 @keyframes gallery {
@@ -179,6 +183,14 @@ p[data-src="#modal-polit"] {
 	}
 	100% {
 		transform: rotate(360deg);
+	}
+}
+@keyframes svg {
+	0% {
+		stroke-dashoffset: 1935;
+	}
+	100% {
+		stroke-dashoffset: 0;
 	}
 }
 
