@@ -1,0 +1,130 @@
+.mob-menu {
+	position: fixed;
+	right: -150%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 50px 15px 30px 15px;
+	z-index: 888;
+	background: $blue;
+	width: 320px;
+	height: 100%;
+	overflow: auto;
+	box-shadow: 0 0 7px $blue;
+	transition: right 0.4s, visibility 0.4s;
+
+	&.active {
+		visibility: visible;
+		right: 0;
+	}
+	// .mob-menu__close
+	&__close {
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		background-color: transparent;
+		cursor: pointer;
+
+		@media (min-width: 992px) {
+			&:hover.mob-menu__close::after,
+			&:hover.mob-menu__close::before {
+				background-color: $gold;
+			}
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: calc(50% - 1px);
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: $gold;
+			transition: background-color 0.3s;
+		}
+		&::before {
+			transform: rotate(-45deg);
+		}
+		&::after {
+			transform: rotate(45deg);
+		}
+	}
+	// .mob-menu__title
+	&__title {
+		font-family: "Lighthaus";
+		margin-bottom: 50px;
+		font-size: 20px;
+		text-transform: uppercase;
+		color: #fff;
+	}
+	// .mob-menu__content
+	&__content {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+	}
+	// .mob-menu__nav
+	&__nav {
+		flex: 1 1 auto;
+		padding-bottom: 40px;
+		li {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+
+			&.current-menu-item a {
+				color: #ffffff;
+			}
+
+			a {
+				font-size: 16px;
+				line-height: lh(22, 16);
+				color: #9e8c73;
+				transition: 0.3s;
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+	// .mob-menu__tels
+	&__tels {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+	// .mob-menu__department
+	&__department {
+		margin-right: 10px;
+		font-size: 13px;
+		line-height: lh(19, 14);
+		color: rgba(255, 255, 255, 0.5);
+		white-space: nowrap;
+	}
+	// .mob-menu__tel
+	&__tel {
+		font-size: 15px;
+		line-height: lh(22, 16);
+		color: #ffffff;
+		white-space: nowrap;
+		transition: 0.3s;
+	}
+	// .mob-menu__btn
+	&__btn {
+		margin: 0 auto;
+	}
+}
+.current-menu-item {
+}
+.btn {
+}
+.call-btn {
+}
+.hvr-sweep-to-right {
+}

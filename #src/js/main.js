@@ -119,6 +119,24 @@ $(document).ready(function () {
 		}
 	}
 
+
+	function getNav() {
+		if ($(window).innerWidth() <= 576) {
+			return {
+				prev: '.catalog--prev-2',
+				next: '.catalog--next-2'
+			}
+		}
+		else {
+			return {
+				prev: '.catalog--prev',
+				next: '.catalog--next'
+			}
+		}
+	}
+
+	console.log(getNav().prev)
+
 	const slider_news = new Swiper('.catalog__slider', {
 		slidesPerView: 1,
 		speed: 900,
@@ -138,20 +156,29 @@ $(document).ready(function () {
 			}
 		},
 		navigation: {
-			nextEl: '.catalog--next',
-			prevEl: '.catalog--prev',
+			nextEl: getNav().next,
+			prevEl: getNav().prev,
 		},
 		// loopedSlides: 1,
 		// slideToClickedSlide: true,
 		breakpoints: {
 			320: {
-				spaceBetween: 146,
+				spaceBetween: 60,
+				autoHeight: false,
+				speed: 400,
 			},
-			1440: {
-				spaceBetween: 146,
+			590: {
+				spaceBetween: 100,
+				autoHeight: true,
+				speed: 900,
+			},
+			1441: {
+				spaceBetween: 100,
+				autoHeight: true,
 			},
 			1733: {
 				spaceBetween: 146,
+				autoHeight: true,
 			},
 		}
 	});
@@ -295,19 +322,19 @@ $(document).ready(function () {
 
 
 	// Menu-burger
-	// burger.click(function () {
-	// 	mobMenu.addClass('active')
-	// })
+	$('.header__burger').click(function () {
+		$('.mob-menu').addClass('active')
+	})
 
-	// $('.mob-menu__close').click(function () {
-	// 	mobMenu.removeClass('active')
-	// })
+	$('.mob-menu__close').click(function () {
+		$('.mob-menu').removeClass('active')
+	})
 
-	// $(document).click(function (ev) {
-	// 	if (!ev.target.closest('.header__burger') && !ev.target.closest('h1')) {
-	// 		mobMenu.removeClass('active')
-	// 	}
-	// })
+	$(document).click(function (ev) {
+		if (!ev.target.closest('.header__burger')) {
+			$('.mob-menu').removeClass('active')
+		}
+	})
 
 	// Яндекс карта
 	if (document.getElementById('map')) {
