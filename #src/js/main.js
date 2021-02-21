@@ -10,6 +10,28 @@ $(document).ready(function () {
 	// 	})
 	// }
 
+
+
+
+	function parallax() {
+		let scrollPos = 0;
+		let offsetScroll = $(document).scrollTop(),
+			offsetBlock = $('.art').offset().top;
+
+		if (offsetScroll + $(window).innerHeight() / 2 >= offsetBlock && offsetScroll < offsetBlock + $(window).innerHeight() / 2) {
+
+			let value = offsetScroll - offsetBlock + $(window).innerHeight() / 2;
+			let ratio = 1;
+			$('.art__image img').css('transform', `scale(${1 + value * 0.0002 * ratio})`)
+		}
+	}
+
+
+	if (document.querySelector('.art')) {
+		$(window).on('scroll', parallax);
+	}
+
+
 	function toggleTabs(top, bottom, topActive) {
 		$(top).on('click', function (ev) {
 			let text = $(this).next(bottom);
@@ -287,6 +309,18 @@ $(document).ready(function () {
 	// Fancy-box
 
 	$('[data-src="#modal-call"]').fancybox({
+		touch: 'false',
+		smallBtn: false,
+		buttons: '',
+		afterShow: function (instance, current) {
+			console.info(instance);
+			$(current.src).find('.modal-call__decor').addClass('active')
+		},
+		beforeClose: function (instance, current) {
+			$(current.src).find('.modal-call__decor').removeClass('active')
+		}
+	});
+	$('[data-src="#modal-price"]').fancybox({
 		touch: 'false',
 		smallBtn: false,
 		buttons: '',
