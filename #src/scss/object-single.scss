@@ -1123,6 +1123,11 @@
 	background: #20283c;
 	padding-top: 105px;
 	padding-bottom: 105px;
+	&.transit {
+		.month-slide {
+			transition: 1.2s;
+		}
+	}
 	// .process__container
 	&__container {
 	}
@@ -1140,6 +1145,7 @@
 	}
 	// .process__wrapper
 	&__wrapper {
+		margin-bottom: 81px;
 	}
 	// .process__slider
 	&__slider {
@@ -1155,26 +1161,72 @@
 .month {
 	overflow: hidden;
 	height: 100%;
+	padding-left: 104px;
+	position: relative;
+	transition: 0s;
+	&__wrapper {
+		overflow: hidden;
+	}
 	// .month__slider
 	&__slider {
-		width: 591px;
-		margin-left: 500px;
+		// width: 591px;
+		// margin-left: 500px;
+		width: 1225px;
+		.swiper-wrapper {
+			align-items: center;
+		}
 	}
 	// .month__btn
 	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 60px;
+		height: 60px;
+		background: transparent;
+		border-radius: 100%;
+
+		position: absolute;
+		left: 0;
+		z-index: 10;
+		transition: 0.3s;
+		&:hover {
+			border: 1px solid #9e8c73;
+		}
+		svg {
+			path {
+				fill: $gold;
+			}
+		}
+	}
+
+	&--prev {
+		top: 38%;
+		transform: rotate(180deg);
+	}
+
+	&--next {
+		top: 50%;
 	}
 }
 .month-slide {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	height: 100% !important;
-	// transition: 0.3s;
+	// transition: 0.7s;
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		// width: 100%;
+		// transition: 0.4s;
+	}
 	// .month-slide__img
 	&__img {
+		margin-bottom: 34px;
 		position: relative;
-		width: 100%;
 		padding-bottom: 100%;
-
 		img {
 			position: absolute;
 			top: 0;
@@ -1188,48 +1240,144 @@
 	}
 	// .month-slide__text
 	&__text {
-		// display: none;
+		font-size: 16px;
+		line-height: 1.25;
+		color: #9e8c73;
 	}
 	// .month-slide__hidden
 	&__hidden {
 	}
 
+	&.swiper-slide-active {
+		width: 591px !important;
+		.month-slide__item {
+			transform: translateX(-108px);
+		}
+
+		& + .month-slide {
+			.month-slide__item {
+				transform: translateX(-108px);
+			}
+
+			& + .month-slide {
+				.month-slide__item {
+					transform: translateX(-200px);
+				}
+			}
+		}
+		// .month-slide__item {
+		// 	width: 591px;
+		// }
+		// .month-slide__text {
+		// 	display: none;
+		// }
+	}
 	&:not(.swiper-slide-active) {
-		.month-slide__img {
+		.month-slide__item {
 			width: 269px;
-			padding-bottom: 269px;
 		}
 		.month-slide__text {
 			display: none;
 		}
 	}
 
-	&.swiper-slide-next + .swiper-slide {
-		transform: translateX(-322px);
-	}
+	// &.swiper-slide-next + .swiper-slide {
+	// 	transform: translateX(-322px);
+	// }
 
-	&.swiper-slide-prev {
-		transform: translateX(322px);
-	}
+	// &.swiper-slide-prev {
+	// 	transform: translateX(322px);
+	// }
 }
 .month--prev {
 }
 .month--next {
 }
 .process-links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #9e8c73;
 	// .process-links__item
 	&__item {
+		font-size: 18px;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: #9e8c73;
+		position: relative;
+		&.prev {
+			padding-left: 30px;
+			background: url("../img/link-arrow.svg") 0 50% no-repeat;
+		}
+
+		&.next {
+			padding-right: 30px;
+			background: url("../img/link-arrow-1.svg") 100% 50% no-repeat;
+		}
 	}
 	// .process-links__currnet
 	&__currnet {
+		font-size: 20px;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: #ffffff;
+		margin: 0 20px;
 	}
 }
 .process-pag {
+	margin-top: 27px;
+	padding: 0 25px;
+	position: relative;
 	// .process-pag__slider
 	&__slider {
+		font-size: 12px;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: #9e8c73;
+	}
+	.swiper-slide-thumb-active {
+		color: #fff;
 	}
 }
 .process-pag--prev {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+
+	transform: rotate(180deg);
+	svg path {
+		fill: $gold;
+	}
+	&:hover {
+		svg path {
+			fill: #fff;
+		}
+	}
 }
 .process-pag--next {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	background-color: transparent;
+	svg path {
+		fill: $gold;
+	}
+	&:hover {
+		svg path {
+			fill: #fff;
+		}
+	}
 }

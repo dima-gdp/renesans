@@ -243,7 +243,7 @@ $(document).ready(function () {
 
 	const slider_pag_process = new Swiper('.process-pag__slider', {
 		slidesPerView: 12,
-		spaceBetween: 14,
+		spaceBetween: 75,
 		loop: false,
 		loopedSlides: 1,
 		slideToClickedSlide: true,
@@ -277,11 +277,11 @@ $(document).ready(function () {
 				slidesPerView: 7,
 			},
 			1620: {
-				spaceBetween: 14,
+				spaceBetween: 75,
 				slidesPerView: 8,
 			},
 			1751: {
-				spaceBetween: 14,
+				spaceBetween: 75,
 				slidesPerView: 9,
 			},
 		}
@@ -324,15 +324,30 @@ $(document).ready(function () {
 	});
 
 	$('.swiper-slide.month').each(function (i, el) {
-		const sel = $(el).find('.month__slider')
+		const sel = el.querySelector('.month__slider')
+		// const sel = $(el).find('.month__slider')
 		const btns = $(el).find('.month__btn')
 
 		const slider_process_item = new Swiper(sel, {
-			slidesPerView: 1,
+			slidesPerView: 3,
+			initialSlide: 1,
 			speed: 900,
-			autoHeight: true,
+			on: {
+				afterInit: function () {
+
+					setTimeout(function () {
+						$('.process').addClass('transit')
+					}, 2000);
+					console.log($('.process__slider').innerHeight());
+					$('.month').css('min-height', $('.process__slider').innerHeight())
+
+
+				},
+			},
+			// autoHeight: true,
 			spaceBetween: 47,
 			loop: true,
+			centeredSlides: true,
 			loopedSlides: 2,
 			observeParents: true,
 			observeSlideChildren: true,
@@ -341,6 +356,8 @@ $(document).ready(function () {
 				nextEl: btns[1],
 				prevEl: btns[0],
 			},
+
+
 			// breakpoints: {
 			// 	320: {
 			// 		spaceBetween: 60,
@@ -365,7 +382,10 @@ $(document).ready(function () {
 
 	})
 
-	console.log()
+	// slider_process.on('afterInit', function () {
+	// 	console.log($('.process__wrapper').innerHeight());
+	// });
+
 
 
 
@@ -559,6 +579,9 @@ $(document).ready(function () {
 	}
 
 
+
+
+
 	// Alertify
 	// alertify.set('notifier', 'position', 'bottom-right');
 	// alertify.set('notifier', 'delay', 10);
@@ -581,9 +604,6 @@ $(document).ready(function () {
 	// 		return false;
 	// 	}
 	// });
-
-
-
 
 
 });
