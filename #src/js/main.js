@@ -142,22 +142,68 @@ $(document).ready(function () {
 	}
 
 
-	function getNav() {
-		if ($(window).innerWidth() <= 576) {
-			return {
-				prev: '.catalog--prev-2',
-				next: '.catalog--next-2'
-			}
-		}
-		else {
-			return {
-				prev: '.catalog--prev',
-				next: '.catalog--next'
-			}
-		}
-	}
+	// function getNav() {
+	// 	if ($(window).innerWidth() <= 576) {
+	// 		return {
+	// 			prev: '.catalog--prev-2',
+	// 			next: '.catalog--next-2'
+	// 		}
+	// 	}
+	// 	else {
+	// 		return {
+	// 			prev: '.catalog--prev',
+	// 			next: '.catalog--next'
+	// 		}
+	// 	}
+	// }
 
-	console.log(getNav().prev)
+	// console.log(getNav().prev)
+
+	const slider_pag = new Swiper('.control__slider', {
+		slidesPerView: 9,
+		spaceBetween: 14,
+		loop: false,
+		loopedSlides: 1,
+		slideToClickedSlide: true,
+		navigation: {
+			nextEl: '.catalog--next',
+			prevEl: '.catalog--prev',
+		},
+		breakpoints: {
+			320: {
+				spaceBetween: 10,
+				slidesPerView: 2,
+			},
+			375: {
+				spaceBetween: 10,
+				slidesPerView: 3,
+			},
+			620: {
+				spaceBetween: 10,
+				slidesPerView: 4,
+			},
+			745: {
+				spaceBetween: 10,
+				slidesPerView: 5,
+			},
+			891: {
+				spaceBetween: 10,
+				slidesPerView: 6,
+			},
+			1061: {
+				spaceBetween: 14,
+				slidesPerView: 7,
+			},
+			1620: {
+				spaceBetween: 14,
+				slidesPerView: 8,
+			},
+			1751: {
+				spaceBetween: 14,
+				slidesPerView: 9,
+			},
+		}
+	});
 
 	const slider_news = new Swiper('.catalog__slider', {
 		slidesPerView: 1,
@@ -169,20 +215,9 @@ $(document).ready(function () {
 		observeParents: true,
 		observeSlideChildren: true,
 		observer: true,
-		// centeredSlides: true,
-		pagination: {
-			el: '.catalog__pagination',
-			clickable: true,
-			renderBullet: function (index, className) {
-				return '<div class="' + className + '">' + addZero(index + 1) + '</div>';
-			}
+		thumbs: {
+			swiper: slider_pag,
 		},
-		navigation: {
-			nextEl: getNav().next,
-			prevEl: getNav().prev,
-		},
-		// loopedSlides: 1,
-		// slideToClickedSlide: true,
 		breakpoints: {
 			320: {
 				spaceBetween: 60,
@@ -204,6 +239,135 @@ $(document).ready(function () {
 			},
 		}
 	});
+
+
+	const slider_pag_process = new Swiper('.process-pag__slider', {
+		slidesPerView: 12,
+		spaceBetween: 14,
+		loop: false,
+		loopedSlides: 1,
+		slideToClickedSlide: true,
+		navigation: {
+			nextEl: '.process-pag--next',
+			prevEl: '.process-pag--prev',
+		},
+		breakpoints: {
+			320: {
+				spaceBetween: 10,
+				slidesPerView: 2,
+			},
+			375: {
+				spaceBetween: 10,
+				slidesPerView: 3,
+			},
+			620: {
+				spaceBetween: 10,
+				slidesPerView: 4,
+			},
+			745: {
+				spaceBetween: 10,
+				slidesPerView: 5,
+			},
+			891: {
+				spaceBetween: 10,
+				slidesPerView: 6,
+			},
+			1061: {
+				spaceBetween: 14,
+				slidesPerView: 7,
+			},
+			1620: {
+				spaceBetween: 14,
+				slidesPerView: 8,
+			},
+			1751: {
+				spaceBetween: 14,
+				slidesPerView: 9,
+			},
+		}
+	});
+
+
+	const slider_process = new Swiper('.process__slider', {
+		slidesPerView: 1,
+		speed: 900,
+		// autoHeight: true,
+		allowTouchMove: false,
+		spaceBetween: 40,
+		loop: false,
+		loopedSlides: 2,
+		observeParents: true,
+		observeSlideChildren: true,
+		observer: true,
+		thumbs: {
+			swiper: slider_pag_process,
+		},
+		// breakpoints: {
+		// 	320: {
+		// 		spaceBetween: 60,
+		// 		autoHeight: false,
+		// 		speed: 400,
+		// 	},
+		// 	590: {
+		// 		spaceBetween: 100,
+		// 		autoHeight: true,
+		// 		speed: 900,
+		// 	},
+		// 	1441: {
+		// 		spaceBetween: 100,
+		// 		autoHeight: false,
+		// 	},
+		// 	1733: {
+		// 		spaceBetween: 146,
+		// 	},
+		// }
+	});
+
+	$('.swiper-slide.month').each(function (i, el) {
+		const sel = $(el).find('.month__slider')
+		const btns = $(el).find('.month__btn')
+
+		const slider_process_item = new Swiper(sel, {
+			slidesPerView: 1,
+			speed: 900,
+			autoHeight: true,
+			spaceBetween: 47,
+			loop: true,
+			loopedSlides: 2,
+			observeParents: true,
+			observeSlideChildren: true,
+			observer: true,
+			navigation: {
+				nextEl: btns[1],
+				prevEl: btns[0],
+			},
+			// breakpoints: {
+			// 	320: {
+			// 		spaceBetween: 60,
+			// 		autoHeight: false,
+			// 		speed: 400,
+			// 	},
+			// 	590: {
+			// 		spaceBetween: 100,
+			// 		autoHeight: true,
+			// 		speed: 900,
+			// 	},
+			// 	1441: {
+			// 		spaceBetween: 100,
+			// 		autoHeight: true,
+			// 	},
+			// 	1733: {
+			// 		spaceBetween: 50,
+			// 		autoHeight: false,
+			// 	},
+			// }
+		});
+
+	})
+
+	console.log()
+
+
 
 	function addZero(number) {
 
