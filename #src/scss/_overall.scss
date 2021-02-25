@@ -166,10 +166,13 @@ p[data-src="#modal-polit"] {
 [data-src="#modal-call"] {
 	cursor: pointer;
 }
-
-.swiper-button-disabled {
-	display: none !important;
+[data-src="#modal"] {
+	cursor: pointer;
 }
+
+// .swiper-button-disabled {
+// 	display: none !important;
+// }
 
 // Анимации
 
@@ -195,6 +198,15 @@ p[data-src="#modal-polit"] {
 	}
 	100% {
 		stroke-dashoffset: 0;
+	}
+}
+@keyframes wave {
+	0% {
+	}
+	50% {
+		transform: skew(10deg, 10deg);
+	}
+	100% {
 	}
 }
 

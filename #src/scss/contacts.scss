@@ -120,6 +120,12 @@
 			height: 300px;
 		}
 	}
+	a {
+		transition: color 0.3s;
+		&:hover {
+			color: $gold;
+		}
+	}
 }
 
 .contacts-tels {

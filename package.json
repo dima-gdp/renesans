@@ -18,5 +18,8 @@
     "gulp-sass": "^4.1.0",
     "gulp-tinypng-compress": "^1.2.5",
     "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "stickyfilljs": "^2.1.0"
   }
 }
