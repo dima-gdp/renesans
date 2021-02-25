@@ -546,7 +546,7 @@ $(document).ready(function () {
 				{
 					preset: 'islands#redIcon',
 					iconLayout: 'default#image',
-					iconImageHref: '../img/map.svg',
+					iconImageHref: '/wp-content/themes/starter/assets/img/map.svg',
 					iconImageSize: [24, 35],
 					// iconImageOffset: [-19, -52]
 				});
