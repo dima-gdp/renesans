@@ -79,7 +79,10 @@ $(document).ready(function () {
 	const slider_partners = new Swiper('.partners__slider', {
 		slidesPerView: 5,
 		spaceBetween: 40,
-		loop: false,
+		loop: true,
+		autoplay: {
+			delay: 4000,
+		},
 		navigation: {
 			nextEl: '.nav-slider--next',
 			prevEl: '.nav-slider--prev',
@@ -405,8 +408,11 @@ $(document).ready(function () {
 	const slider_gal = new Swiper('.gallery__slider', {
 		slidesPerView: 4,
 		spaceBetween: 40,
-		loop: false,
-		loopedSlides: 2,
+		// loop: true,
+		// autoplay: {
+		// 	delay: 4000,
+		// },
+		// loopedSlides: 2,
 		observeParents: true,
 		observeSlideChildren: true,
 		observer: true,
@@ -511,6 +517,11 @@ $(document).ready(function () {
 		// autoFocus: false,
 		// hash: false,
 	});
+
+	let corp = $('.object__title').text().trim();
+	$('.corp-name').val(corp)
+
+	console.log($('.corp-name').val())
 
 	// Input-mask
 	$('input[type="tel"]').inputmask({ "mask": "+7 (999)-999-99-99" });

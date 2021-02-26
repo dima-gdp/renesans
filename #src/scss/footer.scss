@@ -91,32 +91,6 @@
 		}
 	}
 
-	input {
-		padding: 15px 29px;
-		font-size: 18px;
-		color: #fff;
-		height: 60px;
-		border: 1px solid rgba(255, 255, 255, 0.3);
-		background: transparent;
-		width: 100%;
-		@media (max-width: 576px) {
-			height: 50px;
-			font-size: 16px;
-			padding: 15px 25px;
-		}
-
-		&:focus {
-			color: #ffffff;
-			border: 1px solid #9e8c73;
-			&::placeholder {
-				color: #fff;
-			}
-		}
-		&::placeholder {
-			color: rgba(255, 255, 255, 0.4);
-		}
-	}
-
 	.wpcf7-form {
 		display: flex;
 		flex-direction: column;
@@ -127,6 +101,31 @@
 		@media (max-width: 576px) {
 			margin-bottom: 20px;
 		}
+		input {
+			padding: 15px 29px;
+			font-size: 18px;
+			color: #fff;
+			height: 60px;
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			background: transparent;
+			width: 100%;
+			@media (max-width: 576px) {
+				height: 50px;
+				font-size: 16px;
+				padding: 15px 25px;
+			}
+
+			&:focus {
+				color: #ffffff;
+				border: 1px solid #9e8c73;
+				&::placeholder {
+					color: #fff;
+				}
+			}
+			&::placeholder {
+				color: rgba(255, 255, 255, 0.4);
+			}
+		}
 	}
 	&__btn {
 		background: #9e8c73;
@@ -135,8 +134,12 @@
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		color: #ffffff;
+		transition: 0.3s;
 		@media (max-width: 576px) {
 			font-size: 16px;
+		}
+		&:hover {
+			background: #8f7c61;
 		}
 	}
 	// .from__privacy

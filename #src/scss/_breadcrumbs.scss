@@ -10,7 +10,10 @@
 		flex-wrap: wrap;
 		align-items: center;
 		.post,
-		.home {
+		.home,
+		.archive,
+		.taxonomy,
+		.category {
 			font-size: 14px;
 			line-height: lh(19, 14);
 			letter-spacing: 0.2em;

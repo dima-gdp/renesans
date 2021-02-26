@@ -19,6 +19,7 @@
 		font-size: 36px;
 		line-height: 1.28;
 		color: #000000;
+		text-transform: uppercase;
 		@media (max-width: 1050px) {
 			@include adaptiv(font-size, 35, 20, 1050, 320);
 			@include adaptiv(margin-bottom, 43, 25, 1050, 320);
