@@ -625,6 +625,7 @@
 			display: table;
 		}
 	}
+
 	@media (max-width: 1919px) {
 		@include adaptiv(padding-left, 84, 30, 1919, 993);
 	}

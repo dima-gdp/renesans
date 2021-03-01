@@ -20,6 +20,8 @@
     "node-sass": "^5.0.0"
   },
   "dependencies": {
+    "sticky-kit": "^1.1.3",
+    "stickybits": "^3.7.9",
     "stickyfilljs": "^2.1.0"
   }
 }
