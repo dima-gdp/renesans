@@ -7,19 +7,23 @@
 			@@include('breadcrumbs.html')
 			<h1 class="object__title title">ЖК «ОНЕГИН»</h1>
 			<div class="object__block-wrapper">
-				<div class="object__decor"></div>
+				<div class="object__decor" data-aos="svg" data-aos-duration="7000">
+					@@include('img/ellipse-big.svg')
+				</div>
 				<div class="object__block">
-					<div class="object__img-wrapper">
+					<div class="object__img-wrapper" data-aos="photo" data-aos-duration="800" data-aos-easing="ease-in"
+						data-aos-delay="300">
 						<div class="object__img">
 							<img src="img/object-1.jpg" alt="">
 						</div>
 					</div>
-					<div class="object__img-wrapper">
+					<div class="object__img-wrapper" data-aos="photo" data-aos-duration="800" data-aos-easing="ease-in">
 						<div class="object__img">
 							<img src="img/object-2.jpg" alt="">
 						</div>
 					</div>
-					<div class="object__img-wrapper">
+					<div class="object__img-wrapper" data-aos="photo" data-aos-duration="800" data-aos-easing="ease-in"
+						data-aos-delay="600">
 						<div class="object__img">
 							<img src="img/object-3.jpg" alt="">
 						</div>
@@ -38,6 +42,7 @@
 	<section class="descr">
 		<div class="descr__container container">
 			<div class="descr__flex">
+
 				<div class="descr__left">
 					<h2 class="descr__title">ОБЩИЕ СВЕДЕНИЯ</h2>
 					<div class="descr__content type-style descr__content--1">
@@ -61,7 +66,7 @@
 								<div class="item-descr__flex">
 									<div class="item-descr__row">
 										<div class="item-descr__key">1-комнатные</div>
-										<div class="item-descr__value">S 41,2 м2 - 41,5 м2</div>
+										<div class="item-descr__value"><span class="s">S</span> 41,2 м2 - 41,5 м2</div>
 									</div>
 									<div class="item-descr__row">
 										<div class="item-descr__key">1-комнатные евро</div>
@@ -143,11 +148,13 @@
 							<div class="toggle__bot">
 								<div class="toggle__text type-style">
 									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus magnam odio accusamus
-										rerum autem, repellendus deleniti minima illum architecto laborum maiores aut nostrum! Ab vero esse
+										rerum autem, repellendus deleniti minima illum architecto laborum maiores aut nostrum! Ab vero
+										esse
 										dolorem blanditiis doloremque accusamus.
 									</p>
 									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus magnam odio accusamus
-										rerum autem, repellendus deleniti minima illum architecto laborum maiores aut nostrum! Ab vero esse
+										rerum autem, repellendus deleniti minima illum architecto laborum maiores aut nostrum! Ab vero
+										esse
 										dolorem blanditiis doloremque accusamus.
 									</p>
 									<ul>
@@ -192,6 +199,8 @@
 						</div>
 					</div>
 				</div>
+
+
 				<div class="descr__right">
 					<div class="descr-form">
 						<div class="descr-form__image">
@@ -211,7 +220,10 @@
 						<p class="descr-form__privacy">
 							Нажимая кнопку «Отправить», я принимаю <a data-src="#modal-polit">политику конфиденциальности сайта</a>
 						</p>
-						<img src="img/wave-from.svg" alt="" class="svg">
+						<div class="svg-wrapper">
+							<img src="img/wave-from.svg" alt="" class="svg">
+						</div>
+
 					</div>
 				</div>
 			</div>
@@ -402,547 +414,21 @@
 							<button class="month__btn month--prev">@@include('img/arrow-slider.svg')</button>
 							<button class="month__btn month--next">@@include('img/arrow-slider.svg')</button>
 						</div>
-						<div class="swiper-slide month">
-							<div class="month__wrapper">
-								<div class="month__slider">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-
-							<button class="month__btn month--prev">@@include('img/arrow-slider.svg')</button>
-							<button class="month__btn month--next">@@include('img/arrow-slider.svg')</button>
-						</div>
-						<div class="swiper-slide month">
-							<div class="month__wrapper">
-								<div class="month__slider">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-
-							<button class="month__btn month--prev">@@include('img/arrow-slider.svg')</button>
-							<button class="month__btn month--next">@@include('img/arrow-slider.svg')</button>
-						</div>
-						<div class="swiper-slide month">
-							<div class="month__wrapper">
-								<div class="month__slider">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-
-							<button class="month__btn month--prev">@@include('img/arrow-slider.svg')</button>
-							<button class="month__btn month--next">@@include('img/arrow-slider.svg')</button>
-						</div>
-						<div class="swiper-slide month">
-							<div class="month__wrapper">
-								<div class="month__slider">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-
-							<button class="month__btn month--prev">@@include('img/arrow-slider.svg')</button>
-							<button class="month__btn month--next">@@include('img/arrow-slider.svg')</button>
-						</div>
-						<div class="swiper-slide month">
-							<div class="month__wrapper">
-								<div class="month__slider">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-
-							<button class="month__btn month--prev">@@include('img/arrow-slider.svg')</button>
-							<button class="month__btn month--next">@@include('img/arrow-slider.svg')</button>
-						</div>
-						<div class="swiper-slide month">
-							<div class="month__wrapper">
-								<div class="month__slider">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-
-							<button class="month__btn month--prev">@@include('img/arrow-slider.svg')</button>
-							<button class="month__btn month--next">@@include('img/arrow-slider.svg')</button>
-						</div>
-						<div class="swiper-slide month">
-							<div class="month__wrapper">
-								<div class="month__slider">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-
-							<button class="month__btn month--prev">@@include('img/arrow-slider.svg')</button>
-							<button class="month__btn month--next">@@include('img/arrow-slider.svg')</button>
-						</div>
-						<div class="swiper-slide month">
-							<div class="month__wrapper">
-								<div class="month__slider">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-
-							<button class="month__btn month--prev">@@include('img/arrow-slider.svg')</button>
-							<button class="month__btn month--next">@@include('img/arrow-slider.svg')</button>
-						</div>
-						<div class="swiper-slide month">
-							<div class="month__wrapper">
-								<div class="month__slider">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-										<div class="swiper-slide month-slide">
-											<a href="img/month-1.jpg" data-fancybox="month-1" class="month-slide__item">
-												<div class="month-slide__img">
-													<img src="img/month-1.jpg" alt="" data-src="img/month-1.jpg" class="swiper-lazy">
-												</div>
-												<div class="month-slide__text">Равным образом дальнейшее развитие различных форм деятельности в
-													значительной степени обуславливает создание существенных</div>
-												<div class="month-slide__hidden" href="img/month-2.jpg" data-fancybox="month-1"></div>
-											</a>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-
-							<button class="month__btn month--prev">@@include('img/arrow-slider.svg')</button>
-							<button class="month__btn month--next">@@include('img/arrow-slider.svg')</button>
-						</div>
-
 
 					</div>
 				</div>
 			</div>
 
 			<div class="process-links">
-				<a href="#" class="process-links__item prev"><span>Смотреть</span> 2018 <span>год</span></a>
+				<a href="#" class="process-links__item prev">
+					@@include('img/arrow-process.svg')<span>Смотреть</span>
+					<p>2018</p><span>год</span>
+				</a>
 				<div class="process-links__currnet">2019 год</div>
-				<a href="#" class="process-links__item next"><span>Смотреть</span> 2020 <span>год</span></a>
+				<a href="#" class="process-links__item next"><span>Смотреть</span>
+					<p>2020</p>
+					<span>год</span>@@include('img/arrow-process-next.svg')
+				</a>
 			</div>
 
 			<div class="process-pag">

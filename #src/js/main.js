@@ -1,6 +1,15 @@
 $(document).ready(function () {
 	objectFitImages();
-	AOS.init();
+	AOS.init({
+		disable: function () {
+			var maxWidth = 1101;
+			return $(window).innerWidth() < maxWidth;
+		}
+	});
+
+
+
+
 
 	// Табы
 	// function tabs(buttonsList, wrapper, tabBlock) {
@@ -10,6 +19,15 @@ $(document).ready(function () {
 	// 	})
 	// }
 
+
+	if ($(window).innerWidth() > 1000) {
+		const leftBlock = $('.descr__left');
+		let height = $(leftBlock).innerHeight()
+		leftBlock.css('max-height', `${height}px`)
+
+		$(leftBlock).overlayScrollbars({
+		});
+	}
 
 
 
@@ -136,6 +154,8 @@ $(document).ready(function () {
 				}
 			});
 		}
+
+
 
 		else {
 			if ($('.new__slider').hasClass('swiper-container-initialized')) {
@@ -315,9 +335,9 @@ $(document).ready(function () {
 	});
 
 	if (document.querySelector('.process')) {
-		$('.swiper-slide.month').each(function (i, el) {
+
+		document.querySelectorAll('.swiper-slide.month').forEach(function (el) {
 			const sel = el.querySelector('.month__slider')
-			// const sel = $(el).find('.month__slider')
 			const btns = $(el).find('.month__btn')
 
 			const slider_process_item = new Swiper(sel, {
@@ -325,15 +345,29 @@ $(document).ready(function () {
 				initialSlide: 1,
 				preloadImages: false,
 				lazy: true,
-				speed: 900,
+				speed: 1500,
 				// autoHeight: true,
 				spaceBetween: 47,
-				loop: true,
+				loop: false,
 				centeredSlides: true,
 				loopedSlides: 2,
 				observeParents: true,
 				observeSlideChildren: true,
 				observer: true,
+				on: {
+					afterInit: function () {
+						setTimeout(function () {
+							$('.month__slider').css('min-height', $('.process__slider').innerHeight())
+						}, 2000);
+
+					},
+					slideChangeTransitionEnd: function () {
+						$('.month-slide.swiper-slide-active .month-slide__text').css('opacity', '1')
+					},
+					slideChange: function () {
+						$('.month-slide .month-slide__text').css('opacity', '0')
+					},
+				},
 				navigation: {
 					nextEl: btns[1],
 					prevEl: btns[0],
@@ -363,18 +397,6 @@ $(document).ready(function () {
 						spaceBetween: 10,
 						slidesPerView: 3,
 						centeredSlides: true,
-						on: {
-							afterInit: function () {
-
-								setTimeout(function () {
-									$('.process').addClass('transit')
-								}, 2000);
-								console.log($('.process__slider').innerHeight());
-								$('.month').css('min-height', $('.process__slider').innerHeight())
-
-
-							},
-						},
 					},
 					1521: {
 						slidesPerView: 3,
@@ -521,8 +543,6 @@ $(document).ready(function () {
 	let corp = $('.object__title').text().trim();
 	$('.corp-name').val(corp)
 
-	console.log($('.corp-name').val())
-
 	// Input-mask
 	$('input[type="tel"]').inputmask({ "mask": "+7 (999)-999-99-99" });
 
@@ -565,6 +585,11 @@ $(document).ready(function () {
 			myMap.geoObjects.add(myPlacemark);
 		});
 	}
+
+	window.onload = function () {
+		document.querySelector('.preloader').style.display = 'none';
+	};
+
 
 
 

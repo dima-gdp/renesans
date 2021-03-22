@@ -72,6 +72,11 @@
 				transform: translateX(7px);
 			}
 		}
+		.item-project__img {
+			img {
+				transform: scale(1.1);
+			}
+		}
 	}
 	// .item-project__img
 	&__img {
@@ -100,6 +105,7 @@
 			object-fit: cover;
 			object-position: center;
 			font-family: "object-fit: cover; object-position: center;";
+			transition: 0.5s linear;
 		}
 	}
 	// .item-project__descr

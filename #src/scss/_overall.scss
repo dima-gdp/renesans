@@ -70,6 +70,15 @@ body {
 	margin-bottom: 0 !important;
 }
 
+sup {
+	font-size: 0.7em;
+}
+
+.os-scrollbar-handle {
+	opacity: 0;
+	visibility: hidden;
+}
+
 div.wpcf7-response-output,
 div.wpcf7-validation-errors,
 div.wpcf7 .ajax-loader {
@@ -219,6 +228,86 @@ p[data-src="#modal-polit"] {
 	}
 }
 
+[data-aos="svg"] {
+	@media (min-width: 1101px) {
+		&.aos-animate {
+			svg {
+				stroke-dashoffset: 0;
+			}
+		}
+	}
+}
+
+[data-aos="title-w"] {
+	@media (min-width: 1101px) {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background: #fff;
+			transition: width 2s ease-in-out;
+		}
+
+		&.aos-animate {
+			&::before {
+				width: 0;
+			}
+		}
+	}
+}
+
+[data-aos="title-b"] {
+	@media (min-width: 1101px) {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background: #283044;
+			transition: width 2s ease-in-out;
+		}
+
+		&.aos-animate {
+			&::before {
+				width: 0;
+			}
+		}
+	}
+}
+
+[data-aos="photo"] {
+	@media (min-width: 1101px) {
+		transition-property: transform, opacity;
+		transform-origin: center top !important;
+		transform: scale(0.5);
+		opacity: 0;
+		&.aos-animate {
+			transform: none;
+			opacity: 1;
+		}
+	}
+}
+
+[data-aos="photo"] {
+	@media (min-width: 1101px) {
+		transition-property: transform, opacity;
+		transform-origin: center top !important;
+		transform: scale(0.5);
+		opacity: 0;
+		&.aos-animate {
+			transform: none;
+			opacity: 1;
+		}
+	}
+}
+
 .hvr-sweep-to-right {
 	vertical-align: middle;
 	-webkit-transform: perspective(1px) translateZ(0);
@@ -254,4 +343,117 @@ p[data-src="#modal-polit"] {
 .hvr-sweep-to-right:hover:before {
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
+}
+
+@keyframes preloader {
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+.preloader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #fafafa;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	background: #283044;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 618px;
+		height: 618px;
+		stroke-dasharray: 1935;
+		stroke-dashoffset: 1935;
+		transition: 2s;
+		animation-name: svg;
+		animation-timing-function: linear;
+		animation-duration: 3s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	}
+	svg:nth-child(2) {
+		top: calc(50% + 15px);
+		left: calc(50% - 30px);
+	}
+
+	.logo__row:nth-child(1) {
+		visibility: hidden;
+	}
+
+	img {
+		transform: translate(-100vw, 0);
+		animation-name: preloader;
+		animation-duration: 1.2s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	}
+
+	.anim {
+		display: flex;
+		span {
+			// transition: 0.7s;
+			// transform: none !important;
+			animation-name: preloader;
+			animation-duration: 1.2s;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			// animation: name duration timing-function delay iteration-count direction fill-mode;
+		}
+		span:nth-child(1) {
+			transform: translate(-150vw, -100vh);
+			// top: -150vh;
+			// left: -150vw;
+		}
+		span:nth-child(2) {
+			transform: translate(-150vw, 0);
+			// bottom: -150vh;
+			// left: -150vw;
+		}
+		span:nth-child(3) {
+			transform: translate(0, -100vh);
+			// top: -150vh;
+			// right: -150vw;
+		}
+		span:nth-child(4) {
+			transform: translate(150vw, -100vh);
+			// bottom: -150vh;
+			// right: -150vw;
+		}
+		span:nth-child(5) {
+			transform: translate(-150vw, 100vh);
+			// top: -150vh;
+			// left: -150vw;
+		}
+		span:nth-child(6) {
+			transform: translate(150vw, 100vh);
+			// top: -150vh;
+			// left: 0;
+		}
+		span:nth-child(7) {
+			transform: translate(-150vw, 300px);
+			// top: 0;
+			// left: -150vw;
+		}
+		span:nth-child(8) {
+			transform: translate(300px, -100vh);
+			// top: -300px;
+			// left: -150vw;
+		}
+		span:nth-child(9) {
+			transform: translate(700px, 100vh);
+			// top: -150vh;
+			// left: 700px;
+		}
+	}
 }

@@ -11,6 +11,7 @@
 	&__title {
 		margin-bottom: 38px;
 		color: #fff;
+		text-transform: uppercase;
 	}
 	// .object__block-wrapper
 	&__block-wrapper {
@@ -36,7 +37,21 @@
 		left: 23%;
 		padding-bottom: 80%;
 		width: 80%;
-		background: url("../img/ellipse-big.svg") 0 0 / contain no-repeat;
+		// background: url("../img/ellipse-big.svg") 0 0 / contain no-repeat;
+		overflow: hidden;
+		svg {
+			width: 100%;
+			height: 100%;
+			stroke-dasharray: 3069;
+			stroke-dashoffset: 3069;
+			transition: 1.8s linear;
+			@media (max-width: 1100px) {
+				display: none;
+			}
+		}
+		@media (max-width: 1100px) {
+			background: url("../img/ellipse-big.svg") 0 0 / contain no-repeat;
+		}
 		@media (max-width: 420px) {
 			width: 130%;
 			top: 2%;
@@ -48,8 +63,13 @@
 	&__img-wrapper {
 		position: absolute;
 
-		&:hover {
-			z-index: 10;
+		@media (min-width: 1100px) {
+			&:hover {
+				z-index: 10;
+				.object__img {
+					transform: scale(1.07);
+				}
+			}
 		}
 
 		&:first-child {
@@ -111,6 +131,7 @@
 	// .object__img
 	&__img {
 		position: relative;
+		transition: 0.7s ease-in-out;
 		img {
 			position: absolute;
 			top: 0;
@@ -154,6 +175,7 @@
 		font-size: 24px;
 		line-height: lh(33, 24);
 		color: #9e8c73;
+		cursor: pointer;
 		transition-duration: 0.75s;
 		transition-timing-function: cubic-bezier(0.3, 0.1, 0.3, 1);
 		@media (min-width: 1101px) {
@@ -227,6 +249,7 @@
 		margin-right: 146px;
 		max-width: 1010px;
 		width: 100%;
+		height: 100%;
 		@media (max-width: 1919px) {
 			@include adaptiv(margin-right, 146, 50, 1919, 993);
 		}
@@ -243,6 +266,7 @@
 		font-size: 30px;
 		line-height: 1.33;
 		color: #000000;
+		text-transform: uppercase;
 		@media (max-width: 1919px) {
 			@include adaptiv(font-size, 30, 21, 1919, 320);
 			@include adaptiv(margin-bottom, 50, 20, 1919, 320);
@@ -597,6 +621,10 @@
 	// .item-descr__text
 	&__text {
 	}
+	.s {
+		color: $gold;
+		font-size: 0.8em;
+	}
 }
 
 .descr-form {
@@ -624,6 +652,32 @@
 			content: "";
 			display: table;
 		}
+
+		@media (max-height: 910px) {
+			padding-top: 30px;
+		}
+
+		@media (max-height: 850px) {
+			.descr-form__image {
+				margin-bottom: 30px;
+				margin-left: auto;
+				margin-right: auto;
+				width: 170px;
+				height: 170px;
+				border-radius: 100%;
+				border: 1px solid #9e8c73;
+				overflow: hidden;
+				position: relative;
+				z-index: 3;
+				img {
+					width: 140px;
+					height: 140px;
+				}
+			}
+			.descr-form__position {
+				margin-bottom: 35px;
+			}
+		}
 	}
 
 	@media (max-width: 1919px) {
@@ -633,9 +687,9 @@
 		width: 460px;
 	}
 	@media (max-width: 1300px) {
-		padding-right: 40px;
-		padding-left: 40px;
-		width: 400px;
+		padding-right: 0;
+		padding-left: 0;
+		width: 300px;
 	}
 
 	@media (max-width: 992px) {
@@ -975,7 +1029,7 @@
 	padding-top: 100px;
 	padding-bottom: 172px;
 	@media (max-width: 1919px) {
-		@include adaptiv(padding-top, 100, 60, 1919, 320);
+		@include adaptiv(padding-top, 100, 25, 1919, 320);
 		@include adaptiv(padding-bottom, 172, 60, 1919, 320);
 	}
 	// .online__container
@@ -988,6 +1042,7 @@
 		font-size: 30px;
 		line-height: 1.33;
 		color: #ffffff;
+		text-transform: uppercase;
 		@media (max-width: 1919px) {
 			@include adaptiv(font-size, 30, 21, 1919, 320);
 			@include adaptiv(margin-bottom, 113, 30, 1919, 320);
@@ -1122,6 +1177,7 @@
 		line-height: 1.15;
 		text-align: center;
 		color: #ffffff;
+		text-transform: uppercase;
 		@media (max-width: 1919px) and (min-width: 1201px) {
 			@include adaptiv(font-size, 40, 25, 1919, 1201);
 			@include adaptiv(margin-bottom, 45, 15, 1919, 1201);
@@ -1208,13 +1264,10 @@
 	padding-top: 105px;
 	padding-bottom: 150px;
 	@media (max-width: 1440px) {
-		@include adaptiv(padding-bottom, 150, 50, 1440, 320);
+		@include adaptiv(padding-bottom, 150, 25, 1440, 320);
+		@include adaptiv(padding-top, 105, 50, 1440, 320);
 	}
-	&.transit {
-		.month-slide {
-			transition: 1.2s;
-		}
-	}
+
 	// .process__container
 	&__container {
 	}
@@ -1225,6 +1278,7 @@
 		font-size: 30px;
 		line-height: 1.33;
 		color: #ffffff;
+		text-transform: uppercase;
 		@media (max-width: 1919px) {
 			@include adaptiv(font-size, 30, 21, 1919, 320);
 			@include adaptiv(margin-bottom, 113, 30, 1919, 320);
@@ -1251,12 +1305,19 @@
 	height: 100%;
 	padding-left: 104px;
 	position: relative;
-	transition: 0s;
+	// transition: 0s;
 	@media (max-width: 999px) {
 		padding-left: 82px;
 	}
 	@media (max-width: 576px) {
 		padding-left: 40px;
+	}
+	.swiper-button-disabled {
+		display: flex !important;
+		opacity: 0.3;
+		&:hover {
+			border: none;
+		}
 	}
 	&__wrapper {
 		overflow: hidden;
@@ -1322,8 +1383,21 @@
 	flex-direction: column;
 	justify-content: center;
 	height: 100% !important;
+	user-select: none;
+	transition: 0.6s ease-in-out;
+	.month-slide__item {
+		// transition: 0.6s ease-in-out;
+		transition: 1s ease;
+	}
 	@media (max-width: 1200px) {
 		height: auto !important;
+	}
+
+	.swiper-lazy {
+		transition: opacity 0.5s;
+		&:not([src]) {
+			opacity: 0;
+		}
 	}
 	// transition: 0.7s;
 
@@ -1360,6 +1434,7 @@
 		font-size: 16px;
 		line-height: 1.25;
 		color: #9e8c73;
+		transition: 0.3s;
 		@media (max-width: 1200px) {
 			@include adaptiv(font-size, 16, 13, 1200, 1000);
 		}
@@ -1390,6 +1465,7 @@
 		// }
 
 		.month-slide__item {
+			width: 100%;
 			transform: translateX(-108px);
 			@media (max-width: 1520px) {
 				transform: translateX(-147px);
@@ -1464,8 +1540,11 @@
 	align-items: center;
 	padding-bottom: 20px;
 	border-bottom: 1px solid #9e8c73;
+	user-select: none;
 	// .process-links__item
 	&__item {
+		display: flex;
+		align-items: center;
 		font-size: 18px;
 		letter-spacing: 0.2em;
 		text-transform: uppercase;
@@ -1480,22 +1559,44 @@
 				display: none;
 			}
 		}
-		// &:hover {
-		// 	color: #fff;
-		// }
+		&.hidden {
+			visibility: hidden;
+		}
+		&:hover {
+			color: #fff;
+			svg {
+				path {
+					fill: #fff;
+				}
+			}
+		}
 		&.prev {
-			padding-left: 30px;
-			background: url("../img/link-arrow.svg") 0 50% no-repeat;
-			@media (max-width: 400px) {
-				padding-left: 20px;
+			svg {
+				margin-right: 24px;
+				@media (max-width: 400px) {
+					margin-left: 10px;
+				}
 			}
 		}
 
 		&.next {
-			padding-right: 30px;
-			background: url("../img/link-arrow-1.svg") 100% 50% no-repeat;
-			@media (max-width: 400px) {
-				padding-right: 20px;
+			svg {
+				margin-left: 24px;
+				@media (max-width: 400px) {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		p {
+			margin: 0 0.5em;
+			@media (max-width: 700px) {
+				margin: 0;
+			}
+		}
+		svg {
+			path {
+				transition: 0.3s;
 			}
 		}
 	}
@@ -1534,6 +1635,7 @@
 		color: #9e8c73;
 		cursor: pointer;
 		transition: color 0.3s;
+		user-select: none;
 		@media (max-width: 1600px) {
 			font-size: 11px;
 		}

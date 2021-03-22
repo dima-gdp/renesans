@@ -5,10 +5,31 @@
 		@include adaptiv(padding-bottom, 43, 20, 1600, 320);
 		@include adaptiv(padding-top, 40, 20, 1600, 320);
 	}
+
+	&.white {
+		a {
+			color: #fff;
+		}
+	}
+
 	&__container {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		margin: 0 -20px;
+		& > span {
+			display: inline-flex;
+		}
+		@media (max-width: 1200px) {
+			margin: 0 -15px;
+		}
+		@media (max-width: 768px) {
+			margin: 0 -10px;
+		}
+		@media (max-width: 374px) {
+			margin: 0 -8px;
+		}
+
 		.post,
 		.home,
 		.archive,
@@ -21,32 +42,38 @@
 			color: #766153;
 			margin-right: 20px;
 			margin-left: 20px;
-			@media (max-width: 1440px) {
-				@include adaptiv(margin-right, 20, 8, 1440, 320);
-				@include adaptiv(margin-left, 20, 8, 1440, 320);
+			@media (max-width: 1200px) {
+				margin: 0 15px;
 			}
 			@media (max-width: 992px) {
 				font-size: 13px;
 			}
 			@media (max-width: 768px) {
 				font-size: 12px;
+				margin: 0 10px;
 			}
 			@media (max-width: 420px) {
 				font-size: 11px;
 			}
 			@media (max-width: 374px) {
 				font-size: 10px;
+				margin: 0 8px;
 			}
 		}
+	}
+
+	a {
+		color: #000;
 	}
 	// .breadcrumbs__break
 	&__break {
 		width: 43px;
-		height: 7px;
-		background: url("../img/break.svg") center / contain no-repeat;
+		height: 1px;
+		background: #9e8c73;
+		// background: url("../img/break.svg") center / contain no-repeat;
+
 		@media (max-width: 576px) {
 			width: 22px;
-			height: 6px;
 		}
 	}
 

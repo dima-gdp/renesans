@@ -155,6 +155,7 @@
 			}
 			@media (max-width: 768px) {
 				padding: 10px 15px;
+				font-size: 13px;
 			}
 			&:first-child {
 				border-left: none;
@@ -195,5 +196,11 @@
 
 	img {
 		max-height: 700px;
+	}
+	a {
+		color: #000;
+		&:hover {
+			color: $gold;
+		}
 	}
 }
